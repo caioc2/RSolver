@@ -571,41 +571,105 @@ public class RubiksCube
 
     public bool isSolved()
     {
-        List<List<Cube>> Side;
-        Cube.colorEnum c;
-        bool valid = true;
-
-        for (int z = 0; z < 4; z++)//check perimeter
+        foreach (Cube.sides s in System.Enum.GetValues(typeof(Cube.sides)))
         {
-            Side = getCubeXYFace(0, true);
-            c = Side[1][1].getColor(Cube.sides.FRONT);
-            for (int i = 0; i < 3; i++)
+            Cube.colorEnum[,] c = getFaceColors(s);
+            for (int k = 0; k < 3; ++k)
             {
-                for (int j = 0; j < 3; j++)
+                for (int l = 0; l < 3; ++l)
                 {
-                    if (Side[i][j].getColor(Cube.sides.FRONT) != c)
-                        valid = false;
+                    if (c[l, k] != c[1, 1])
+                        return false;
                 }
+                   
             }
-
-            turnCubeY(true);
         }
+        return true;
+    }
 
-        //check top side
-        Side = getCubeXZFace(2, true);
-        c = Side[1][1].getColor(Cube.sides.TOP);
-        for (int i = 0; i < 3; i++)
+    public int[] getScore()
+    {
+        int[] score = { 0, 0, 0, 0, 0, 0 };
+        
+        int i = 0;
+        foreach(Cube.sides s in System.Enum.GetValues(typeof(Cube.sides)))
         {
-            for (int j = 0; j < 3; j++)
+            Cube.colorEnum[,] c = getFaceColors(s);
+            for(int k = 0; k < 3; ++k)
             {
-                if (Side[i][j].getColor(Cube.sides.TOP) != c)
-                    valid = false;
+                for (int l = 0; l < 3; ++l)
+                    score[i] += c[k, l] == c[1, 1] ? 1 : 0;
+            }
+            i++;
+        }
+
+        return score;
+    }
+
+    public List<List<Cube>> getFace(Cube.sides which)
+    {
+        switch(which)
+        {
+            case Cube.sides.FRONT:
+                return getCubeXYFace(0, true);
+            case Cube.sides.BACK:
+                return getCubeXYFace(2, true);
+            case Cube.sides.LEFT:
+                return getCubeYZFace(0, true);
+            case Cube.sides.RIGHT:
+                return getCubeYZFace(2, true);
+            case Cube.sides.BOTTOM:
+                return getCubeXZFace(0, true);
+            case Cube.sides.TOP:
+                return getCubeXZFace(2, true);
+            default:
+                return new List<List<Cube>>();
+        }
+    }
+
+    public Cube.colorEnum[,] getFaceColors(Cube.sides which)
+    {
+        Cube.colorEnum c = Cube.colorEnum.WHITE;
+        Cube.colorEnum[,] colors = { { c, c, c }, { c, c, c }, { c, c, c } };
+        List<List<Cube>> side = getFace(which);
+        for(int i = 0; i < 3; ++i)
+        {
+            for(int j = 0; j < 3; ++j)
+            {
+                colors[i, j] = side[i][j].getColor(which);
             }
         }
 
-        //if 5 of the 6 sides are correct, the last side must be correct
+        return colors;
+    }
 
-        return valid;
+    public float[] getStateAsVec()
+    {
+        // 6 faces, with 9 cubes, with possible 6 colors per cube
+        float[] state = new float[6 * 9 * 6];
+
+        //pre-process, first map current sides to colors
+
+        int[] c2s = new int[6];//Not safe if change color/side enum values
+        //int[] s2c = new int[6];
+
+        foreach(Cube.sides s in System.Enum.GetValues(typeof(Cube.sides)))
+        {
+            Cube.colorEnum c = getFaceColors(s)[1, 1];
+            c2s[(int)c] = (int)s;
+            //s2c[(int)s] = (int)c;
+        }
+
+        int i = 0;
+        foreach (Cube.sides s in System.Enum.GetValues(typeof(Cube.sides)))
+        {
+            foreach(Cube.colorEnum c in getFaceColors(s))
+            {
+                state[i + c2s[(int)c]] = 1.0f;
+                i += 6;
+            }
+        }
+        return state;
     }
 
     public int RunSequence(int s)
@@ -692,6 +756,11 @@ public class RubiksCube
     public move randChangeMove()
     {
         return (move)Mathf.Round(Random.value * changeMoveCount - 0.499999f);
+    }
+
+    public move randMove()
+    {
+        return (move)Mathf.Round(Random.value * moveCount - 0.499999f);
     }
 
     public void Scramble(int turns)
