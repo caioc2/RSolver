@@ -264,22 +264,14 @@ public class Solver {
 
     void DFS_InitialCheck(int depth, int depthLimit, RubiksCube parent, List<RubiksCube> tree)
     {
-        List<RubiksCube.move> operations = new List<RubiksCube.move> { RubiksCube.move.RIGHT, RubiksCube.move.LEFT, RubiksCube.move.TOP, RubiksCube.move.BOTTOM, RubiksCube.move.FRONT, RubiksCube.move.BACK };//each operation also has an inverse
-        for (int i = 0; i < operations.Count; i++)
+        for (int i = 0; i < RubiksCube.changeMoveCount; i++)
         {
             RubiksCube tempRC = parent.cloneCube();
-            tempRC.RunCustomSequence(operations[i]);
+            tempRC.RunCustomSequence((RubiksCube.move) i);
             if (depth == depthLimit)
                 tree.Add(tempRC);
             else
                 DFS_InitialCheck(depth + 1, depthLimit, tempRC, tree);
-
-            RubiksCube tempRC2 = parent.cloneCube();
-            tempRC2.RunCustomSequence(RubiksCube.getInverse(operations[i]));
-            if (depth == depthLimit)
-                tree.Add(tempRC2);
-            else
-                DFS_InitialCheck(depth + 1, depthLimit, tempRC2, tree);
         }
     }
 
@@ -297,8 +289,8 @@ public class Solver {
             for (int i = 0; i < sol.Count; i ++)
             {
                 tokA = sol[i];
-                tokB = i + 1 < sol.Count ? sol[i + 1] : RubiksCube.move.X;
-                tokC = i + 2 < sol.Count ? sol[i + 2] : RubiksCube.move.X;
+                tokB = i + 1 < sol.Count ? sol[i + 1] : RubiksCube.move.NOTHING;
+                tokC = i + 2 < sol.Count ? sol[i + 2] : RubiksCube.move.NOTHING;
 
                 if (RubiksCube.getInverse(tokA) == tokB)
                 {//if token A is invers of the next token

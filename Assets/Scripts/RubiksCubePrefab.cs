@@ -9,7 +9,7 @@ public class RubiksCubePrefab : MonoBehaviour {
     public RubiksCube RC;//the actual rubiks cube data structure
     public List<List<List<GameObject>>> cubePrefabMatrix;
     public float spacing = 1.05f;
-    public float rotationSpeed = 40;
+    public float rotationSpeed = 500;
 
     // Use this for initialization
     void Start () {
@@ -26,7 +26,7 @@ public class RubiksCubePrefab : MonoBehaviour {
                 {
                     GameObject cubePrefab = Instantiate(CubePrefab, Vector3.zero, Quaternion.identity) as GameObject;
                     cubePrefab.transform.SetParent(transform);
-                    cubePrefab.transform.position = new Vector3((x - 1), (y - 1), (z - 1)) * spacing;
+                    cubePrefab.transform.position = new Vector3((x - 1), (y - 1), (z - 1)) * spacing + transform.position;
                     //cubePrefab.GetComponent<CubePrefab>().refreshPanels(RC.cubeMatrix[x][y][z]);
                     PrefabColumn.Add(cubePrefab);
                 }

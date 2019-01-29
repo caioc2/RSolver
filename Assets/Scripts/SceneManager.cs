@@ -12,7 +12,7 @@ public class SceneManager : MonoBehaviour {
     public Slider SpeedSlider;
     public Text txtAnimationSpeed;
     public Toggle toggleRotateCamera;
-    public bool rotateCamera = true;
+    public bool rotateCamera = false;
     Vector3 cameraResetPos = new Vector3(4, 4, -4);
 
     private IEnumerator coroutine;
@@ -23,6 +23,8 @@ public class SceneManager : MonoBehaviour {
         SpeedSlider = SpeedSlider.GetComponent<Slider>();
         txtAnimationSpeed = txtAnimationSpeed.GetComponent<Text>();
         txtNumMoves = txtNumMoves.GetComponent<Text>();
+        SpeedSlider.minValue = 100;
+        SpeedSlider.maxValue = 10000;
         SpeedSlider.value = RCP.rotationSpeed;
         setAnimationSpeed(RCP.rotationSpeed);
         toggleRotateCamera = toggleRotateCamera.GetComponent<Toggle>();
