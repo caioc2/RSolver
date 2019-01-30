@@ -65,6 +65,17 @@ public class SceneManager : MonoBehaviour {
         {
             runSixDot();
         }
+        /*else if(Input.GetKeyDown(KeyCode.X)) {
+            RCP.RC.turnCubeX(true);
+        }
+        else if (Input.GetKeyDown(KeyCode.Y))
+        {
+            RCP.RC.turnCubeY(true);
+        }
+        else if (Input.GetKeyDown(KeyCode.Z))
+        {
+            RCP.RC.turnCubeZ(true);
+        }*/
     }
 
     public void EasyScrambleCube()
