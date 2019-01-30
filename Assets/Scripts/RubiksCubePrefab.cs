@@ -27,7 +27,7 @@ public class RubiksCubePrefab : MonoBehaviour {
                     GameObject cubePrefab = Instantiate(CubePrefab, Vector3.zero, Quaternion.identity) as GameObject;
                     cubePrefab.transform.SetParent(transform);
                     cubePrefab.transform.position = new Vector3((x - 1), (y - 1), (z - 1)) * spacing + transform.position;
-                    //cubePrefab.GetComponent<CubePrefab>().refreshPanels(RC.cubeMatrix[x][y][z]);
+                    cubePrefab.GetComponent<CubePrefab>().refreshPanels(RC.cubeMatrix[x][y][z]);
                     PrefabColumn.Add(cubePrefab);
                 }
                 PrefabRow.Add(PrefabColumn);
@@ -38,7 +38,8 @@ public class RubiksCubePrefab : MonoBehaviour {
 
     void Update()
     {
-        RefreshPanels();
+        //Not needed?
+        //RefreshPanels();
     }
 
     public void resetCubePrefabPositions()
