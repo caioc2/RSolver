@@ -14,7 +14,6 @@ public class RubiksCubePrefab : MonoBehaviour {
     // Use this for initialization
     void Start () {
         RC = new RubiksCube();
-        
         cubePrefabMatrix = new List<List<List<GameObject>>>();
         for (int x = 0; x < 3; x++)
         {

@@ -9,43 +9,13 @@ public class RubiksCube
                        X = 12, XCC = 13,  Y = 14, YCC = 15, Z = 16, ZCC = 17, NOTHING = 18 };
     public static int moveCount = 19; //total move count
     public static int changeMoveCount = 12; //total moves which change cube configuration
-    public List<List<List<Cube>>> cubeMatrix;
-
-    public List<List<move>> sequences;
+    public List<List<List<Cube>>> cubeMatrix; 
     public List<move> turnRecord;
 
     // Use this for initialization
     public RubiksCube()
     {
-        sequences = new List<List<move>>();
         turnRecord = new List<move>();
-        sequences.Add(stringToMove("RiUFiUi"));//fix middle in stage 2
-        sequences.Add(stringToMove("RiDiRD"));//fix corner in stage 3
-        sequences.Add(stringToMove("URUiRiUiFiUF"));
-        sequences.Add(stringToMove("UiLiULUFUiFi"));
-        sequences.Add(stringToMove("FURUiRiFi"));
-        sequences.Add(stringToMove("FRURiUiFi"));
-        sequences.Add(stringToMove("RURiURUURi"));
-        sequences.Add(stringToMove("RiFRiBBRFiRiBBRRUi"));
-        sequences.Add(stringToMove("FFULRiFFLiRUFF"));
-        sequences.Add(stringToMove("FFUiLRiFFLiRUiFF"));
-
-        sequences.Add(stringToMove("LLRRFFBBUUDD"));//checkerboard
-        sequences.Add(stringToMove("UDiRLiFBiUDi"));//six spots*/
-        /*sequences.Add(new List<move> { move.RIGHTCC, move.TOP, move.FRONTCC, move.TOPCC });//fix middle in stage 2
-        sequences.Add(new List<move> { move.RIGHTCC, move.BOTTOMCC, move.RIGHT, move.BOTTOM });//fix corner in stage 3
-        sequences.Add(new List<move> { move.TOP, move.RIGHT, move.TOPCC, move.RIGHTCC, move.TOPCC, move.FRONTCC, move.TOP, move.FRONT });
-        sequences.Add(new List<move> { move.TOPCC, move.LEFTCC, move.TOP, move.LEFT, move.TOP, move.FRONT, move.TOPCC, move.FRONTCC });
-        sequences.Add(new List<move> { move.FRONT, move.TOP, move.RIGHT, move.TOPCC, move.RIGHTCC, move.FRONTCC });
-        sequences.Add(new List<move> { move.FRONT, move.RIGHT, move.TOP, move.RIGHTCC, move.TOPCC, move.FRONTCC });
-        sequences.Add(new List<move> { move.RIGHT, move.TOP, move.RIGHTCC, move.TOP, move.RIGHT, move.TOP, move.TOP, move.RIGHTCC });
-        sequences.Add(new List<move> { move.RIGHTCC, move.FRONT, move.RIGHTCC, move.BACK, move.BACK, move.RIGHT, move.FRONTCC, move.RIGHTCC, move.BACK, move.BACK, move.RIGHT, move.RIGHT, move.TOPCC });
-        sequences.Add(new List<move> { move.FRONT, move.FRONT, move.TOP, move.LEFT, move.RIGHTCC, move.FRONT, move.FRONT, move.LEFTCC, move.RIGHT, move.TOP, move.FRONT, move.FRONT });
-        sequences.Add(new List<move> { move.FRONT, move.FRONT, move.TOPCC, move.LEFT, move.RIGHTCC, move.FRONT, move.FRONT, move.LEFTCC, move.RIGHT, move.TOPCC, move.FRONT, move.FRONT });
-
-        sequences.Add(new List<move> { move.LEFT, move.LEFT, move.RIGHT, move.RIGHT, move.FRONT, move.FRONT, move.BACK, move.BACK, move.TOP, move.TOP, move.BOTTOM, move.BOTTOM });//checkerboard
-        sequences.Add(new List<move> { move.TOP, move.BOTTOMCC, move.RIGHT, move.LEFTCC, move.FRONT, move.BACKCC, move.TOP, move.BOTTOMCC });//six spots*/
-
         cubeMatrix = new List<List<List<Cube>>>();
 
         for (int x = 0; x < 3; x++)
@@ -64,7 +34,11 @@ public class RubiksCube
             }
             cubeMatrix.Add(CubeRow);
         }
-        //transform.rotation = Quaternion.Euler(new Vector3(45,0,45));
+        setDefaultCubeColor();
+    }
+
+    public void setDefaultCubeColor()
+    {
         for (int i = 0; i < 3; i++)
         {
             for (int j = 0; j < 3; j++)
@@ -80,40 +54,6 @@ public class RubiksCube
         cubeMatrix[1][1][1].setAllSideColors(Cube.colorEnum.BLACK);
     }
 
-    public List<move> stringToMove(string seq)
-    {
-        List<move> m = new List<move>();
-        int i = 0;
-        while(i < seq.Length)
-        {
-            char c = seq[i];
-            if(c == 'R')
-            {
-                m.Add((i + 1 < seq.Length && seq[i + 1] == 'i') ? move.RIGHTCC : move.RIGHT);
-            }else if(c == 'L')
-            {
-                m.Add((i + 1 < seq.Length && seq[i + 1] == 'i') ? move.LEFTCC : move.LEFT);
-            }
-            else if(c == 'U')
-            {
-                m.Add((i + 1 < seq.Length && seq[i + 1] == 'i') ? move.TOPCC : move.TOP);
-            }
-            else if(c == 'D')
-            {
-                m.Add((i + 1 < seq.Length && seq[i + 1] == 'i') ? move.BOTTOMCC : move.BOTTOM);
-            }
-            else if(c == 'B')
-            {
-                m.Add((i + 1 < seq.Length && seq[i + 1] == 'i') ? move.BACKCC : move.BACK);
-            }
-            else if(c == 'F')
-            {
-                m.Add((i + 1 < seq.Length && seq[i + 1] == 'i') ? move.FRONTCC : move.FRONT);
-            }
-            i++;
-        }
-        return m;
-    }
 
     public static move getInverse(move a)
     {
@@ -124,6 +64,26 @@ public class RubiksCube
     public static bool isClockwise(move a)
     {
         return (((uint)a & 1) == 0);
+    }
+
+    List<Cube> getOutline(List<List<Cube>> face)
+    {
+        //converts a 2d matrix of cubes to a linear list of the outline cubes of the provided face
+        //the list is ordered in a clockwise direction, starting with the lower left cube [0][0]
+        //getOutline returns a list of references to the origional matrix
+        List<Cube> outline = new List<Cube>();
+        for (int i = 0; i< 3; i++)
+        {
+            outline.Add(face[0][i]);
+        }
+        outline.Add(face[1][2]);
+        for (int i = 2; i >= 0; i--)
+        {
+            outline.Add(face[2][i]);
+        }
+        outline.Add(face[1][0]);
+
+        return outline;
     }
 
     public List<List<Cube>> getCubeXYFace(int r, bool reference)
@@ -192,25 +152,6 @@ public class RubiksCube
         return face;
     }
 
-    List<Cube> getOutline(List<List<Cube>> face)
-    {
-        //converts a 2d matrix of cubes to a linear list of the outline cubes of the provided face
-        //the list is ordered in a clockwise direction, starting with the lower left cube [0][0]
-        //getOutline returns a list of references to the origional matrix
-        List<Cube> outline = new List<Cube>();
-        for (int i = 0; i < 3; i++)
-        {
-            outline.Add(face[0][i]);
-        }
-        outline.Add(face[1][2]);
-        for (int i = 2; i >= 0; i--)
-        {
-            outline.Add(face[2][i]);
-        }
-        outline.Add(face[1][0]);
-
-        return outline;
-    }
 
     public void rotateFrontFace(bool clockwise, bool record = true)
     {
@@ -434,141 +375,6 @@ public class RubiksCube
         turnRecord.Add((clockwise ? move.Y : move.YCC));
     }
 
-    public Vector3 cornerCubeWithColors(Cube.colorEnum a, Cube.colorEnum b, Cube.colorEnum c)
-    {
-        if (a == b || b == c || c == a)
-            throw new System.ArgumentException("No two colors in query can be the same");
-
-        for (int i= 0; i < 3; i++)
-        {
-            for (int j = 0; j < 3; j++)
-            {
-                for (int k = 0; k < 3; k++)
-                {
-                    if (cubeMatrix[i][j][k].containsColors(a, b, c))
-                    {
-                        return new Vector3(i, j, k);
-                    }
-                }
-            }
-        }
-
-        //cube was not found. Something is wrong if you're looking for a cube that doesn't exist
-        throw new System.ArgumentException("No such cube exists with colors provided");
-
-    }
-
-    public Vector3 sideCubeWithColors(Cube.colorEnum a, Cube.colorEnum b)
-    {
-        if (a == b)
-            throw new System.ArgumentException("No two colors in query can be the same");
-
-        for (int i = 0; i < 3; i++)
-        {
-            for (int j = 0; j < 3; j++)
-            {
-                for (int k = 0; k < 3; k++)
-                {
-                    if (cubeMatrix[i][j][k].numColors()==2 && cubeMatrix[i][j][k].containsColors(a, b))
-                    {
-                        return new Vector3(i, j, k);
-                    }
-                }
-            }
-        }
-
-        //cube was not found. Something is wrong if you're looking for a cube that doesn't exist
-        throw new System.ArgumentException("No such cube exists with colors provided");
-    }
-   
-    public bool isYellowCrossOnTop()
-    {
-        bool valid = true;
-        List<List<Cube>> plane =  getCubeXZFace(2, false);
-
-        if (plane[0][1].getColor(Cube.sides.TOP) != Cube.colorEnum.YELLOW)
-            valid = false;
-        if (plane[1][0].getColor(Cube.sides.TOP) != Cube.colorEnum.YELLOW)
-            valid = false;
-        if (plane[2][1].getColor(Cube.sides.TOP) != Cube.colorEnum.YELLOW)
-            valid = false;
-        if (plane[1][2].getColor(Cube.sides.TOP) != Cube.colorEnum.YELLOW)
-            valid = false;
-
-        //check center
-        if (plane[1][1].getColor(Cube.sides.TOP) != Cube.colorEnum.YELLOW)
-            valid = false;
-
-        return valid;
-    }
-
-    public bool isYellowHorizontalLineOnTop()
-    {
-        bool valid = true;
-        List<List<Cube>> plane = getCubeXZFace(2, false);
-
-        if (plane[0][1].getColor(Cube.sides.TOP) != Cube.colorEnum.YELLOW)
-            valid = false;
-        if (plane[2][1].getColor(Cube.sides.TOP) != Cube.colorEnum.YELLOW)
-            valid = false;
-
-        //check center
-        if (plane[1][1].getColor(Cube.sides.TOP) != Cube.colorEnum.YELLOW)
-            valid = false;
-
-        return valid;
-    }
-
-    public bool isYellowBackwardsLOnTop()
-    {
-        bool valid = true;
-        List<List<Cube>> plane = getCubeXZFace(2, false);
-
-        if (plane[0][1].getColor(Cube.sides.TOP) != Cube.colorEnum.YELLOW)
-            valid = false;
-        if (plane[1][2].getColor(Cube.sides.TOP) != Cube.colorEnum.YELLOW)
-            valid = false;
-
-        //check center
-        if (plane[1][1].getColor(Cube.sides.TOP) != Cube.colorEnum.YELLOW)
-            valid = false;
-
-        return valid;
-    }
-
-    public bool isTopAllYellow()
-    {
-        bool valid = true;
-        List<List<Cube>> plane = getCubeXZFace(2, false);
-
-        for (int i = 0; i < 3; i++)
-        {
-            for (int j = 0; j < 3; j++)
-            {
-                if (plane[i][j].getColor(Cube.sides.TOP) != Cube.colorEnum.YELLOW)
-                    valid = false;
-            }
-        }
-
-        return valid;
-    }
-
-    public bool allTopCornersSolved()
-    {
-        bool iscorrect = true;
-        for (int i = 0; i < 4; i++)
-        {
-            Cube TopLeftFrontCube = cubeMatrix[0][2][0];
-            Cube MiddleLeftFrontCube = cubeMatrix[0][1][0];
-
-            if (TopLeftFrontCube.getColor(Cube.sides.FRONT) != MiddleLeftFrontCube.getColor(Cube.sides.FRONT) || TopLeftFrontCube.getColor(Cube.sides.LEFT) != MiddleLeftFrontCube.getColor(Cube.sides.LEFT))
-                iscorrect = false;
-            turnCubeY(true);
-        }
-
-        return iscorrect;
-    }
-
     public bool isSolved()
     {
         foreach (Cube.sides s in System.Enum.GetValues(typeof(Cube.sides)))
@@ -581,7 +387,6 @@ public class RubiksCube
                     if (c[l, k] != c[1, 1])
                         return false;
                 }
-                   
             }
         }
         return true;
@@ -672,13 +477,6 @@ public class RubiksCube
         return state;
     }
 
-    public int RunSequence(int s)
-    {
-        //Debug.Log("Running sequence: " + s);
-        List<move> seq = sequences[s];
-        int cost = RunCustomSequence(seq);
-        return cost;
-    }
 
     public void RunCustomSequence(move m)
     {
@@ -780,7 +578,6 @@ public class RubiksCube
     public void clearTurnRecord()
     {
         turnRecord.Clear();
-        turnRecord = new List<move>();
     }
 
     public RubiksCube cloneCube()
@@ -810,21 +607,6 @@ public class RubiksCube
     public int TurnRecordTokenCount()
     {
         return turnRecord.Count;
-    }
-
-    public void turnCubeToFaceRGBOColorWithYellowOrWhiteOnTop(Cube.colorEnum c)
-    {
-        if (cubeMatrix[1][1][0].getColor(Cube.sides.FRONT) == c)
-            return;//do nothing
-        else if (cubeMatrix[0][1][1].getColor(Cube.sides.LEFT) == c)
-            turnCubeY(true);
-        else if (cubeMatrix[2][1][1].getColor(Cube.sides.RIGHT) == c)
-            turnCubeY(false);
-        else
-        {
-            turnCubeY(true);
-            turnCubeY(true);
-        }
     }
 
 }
