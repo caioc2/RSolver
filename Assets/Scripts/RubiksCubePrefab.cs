@@ -17,7 +17,7 @@ public class RubiksCubePrefab : MonoBehaviour {
     void Start () {
         RC = new RubiksCube();
         //AnimSeq = new Queue<RubiksCube.move>();
-        AnimSeq = new Queue<RubiksCube.move>(new List<RubiksCube.move> { RubiksCube.move.RIGHT, RubiksCube.move.TOP, RubiksCube.move.FRONT });
+        AnimSeq = new Queue<RubiksCube.move>(new List<RubiksCube.move> { RubiksCube.move.X, RubiksCube.move.Y, RubiksCube.move.Z, RubiksCube.move.XCC, RubiksCube.move.ZCC });
         current = RubiksCube.move.NOTHING;
         cubePrefabMatrix = new List<List<List<GameObject>>>();
         for (int x = 0; x < 3; x++)
@@ -38,109 +38,137 @@ public class RubiksCubePrefab : MonoBehaviour {
             }
             cubePrefabMatrix.Add(PrefabRow);
         }
-
-        Debug.Log(transform.right);
-        Debug.Log(transform.up);
-        Debug.Log(transform.forward);
     }
 
-    private float totalTime = 0.0f;
+    private float totalTime = float.MaxValue;
     void Update()
     {
-        if (totalTime >= rotationTime || rotationTime <= 0.0f)
+
+        /*if (Input.GetKeyDown(KeyCode.Z))
         {
-            RC.RunCustomSequence(current);
+            RC.RunCustomSequence(RubiksCube.move.X);
             resetCubePrefabPositions();
             RefreshPanels();
 
-            if (AnimSeq.Count > 0)
-            {
-                current = AnimSeq.Dequeue();
-                totalTime = 0.0f;
-            } else
-            {
-                current = RubiksCube.move.NOTHING;
-            }
         }
-
-        if (current == RubiksCube.move.NOTHING)
+        else if (Input.GetKeyDown(KeyCode.X))
         {
-            if(AnimSeq.Count > 0)
-            {
-                current = AnimSeq.Dequeue();
-                totalTime = 0.0f;
-            }
-        }
-        else
-        { 
-            totalTime = animMove(totalTime, current);
+            RC.RunCustomSequence(RubiksCube.move.XCC);
+            resetCubePrefabPositions();
+            RefreshPanels();
         }
 
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            current = RubiksCube.move.X;
+            totalTime = 0.0f;
+        }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            current = RubiksCube.move.XCC;
+            totalTime = 0.0f;
+        }*/
+
+        if(totalTime > rotationTime)
+        {
+            current = getNextMove();
+                
+        }
+
+        if(current != RubiksCube.move.NOTHING)
+        {
+            totalTime = animMove(totalTime, current);
+            if(totalTime > rotationTime)
+            {
+                RC.RunCustomSequence(current);
+                resetCubePrefabPositions();
+                RefreshPanels();
+            }
+        }
+
+    }
+
+    private RubiksCube.move getNextMove()
+    {
+        if (AnimSeq.Count > 0)
+        {
+            totalTime = 0.0f;
+            return AnimSeq.Dequeue();
+        }
+        totalTime = float.MaxValue;
+        return RubiksCube.move.NOTHING;
     }
 
     //returns current animation time
     private float animMove(float t, RubiksCube.move m)
     {
-        float dir = RubiksCube.isClockwise(m) ? -1.0f : 1.0f;
         const float angle = 90.0f;
 
         if (t < 0.0f) return float.MaxValue;
 
         //If current time > than animTime, stop anim and update cube faces
-        if(t >=  rotationTime || rotationTime <= 0.0f)
+        if(t > rotationTime)
         {
             return float.MaxValue;
         }
 
         //Else, animate
-        float rot;
+        
         float delta = Time.deltaTime;
-        delta = delta + t > rotationTime ? rotationTime - t : delta;
+
+        if (rotationTime <= 0.0f)
+            delta = 1.0f;
+        else 
+            delta = delta + t > rotationTime ? (rotationTime - t)/rotationTime: delta/rotationTime;
+
+        float rot = delta * angle;
+
+        float dir = RubiksCube.isClockwise(m) ? -1.0f : 1.0f;
         switch (m)
         {
             case RubiksCube.move.RIGHT:
             case RubiksCube.move.RIGHTCC:
-                    rot = -1 * dir * angle * delta / rotationTime;
+                    rot = -dir * rot;
                     for (int i = 0; i < 3; i++) { for (int j = 0; j < 3; j++) { cubePrefabMatrix[2][i][j].transform.RotateAround(transform.position, transform.right, rot); } }
                 break;
             case RubiksCube.move.LEFT:
             case RubiksCube.move.LEFTCC:
-                    rot = dir * angle * delta / rotationTime;
+                    rot = dir * rot;
                     for (int i = 0; i < 3; i++) { for (int j = 0; j < 3; j++) { cubePrefabMatrix[0][i][j].transform.RotateAround(transform.position, transform.right, rot); } }
                 break;
             case RubiksCube.move.TOP:
             case RubiksCube.move.TOPCC:
-                    rot = -1 * dir * angle * delta / rotationTime;
+                    rot = -dir * rot;
                     for (int i = 0; i < 3; i++) { for (int j = 0; j < 3; j++) { cubePrefabMatrix[i][2][j].transform.RotateAround(transform.position, transform.up, rot); } }
                 break;
             case RubiksCube.move.BOTTOM:
             case RubiksCube.move.BOTTOMCC:
-                    rot = dir * angle * delta / rotationTime;
+                    rot = dir * rot;
                     for (int i = 0; i < 3; i++) { for (int j = 0; j < 3; j++) { cubePrefabMatrix[i][0][j].transform.RotateAround(transform.position, transform.up, rot); } }
                 break;
             case RubiksCube.move.FRONT:
             case RubiksCube.move.FRONTCC:
-                    rot = dir * angle * delta / rotationTime;
+                    rot = dir * rot;
                 for (int i = 0; i < 3; i++) { for (int j = 0; j < 3; j++) { cubePrefabMatrix[i][j][0].transform.RotateAround(transform.position, transform.forward, rot); } }
                 break;
             case RubiksCube.move.BACK:
             case RubiksCube.move.BACKCC:
-                    rot = -1 * dir * angle * delta / rotationTime;
+                    rot = -dir * rot;
                 for (int i = 0; i < 3; i++) { for (int j = 0; j < 3; j++) { cubePrefabMatrix[i][j][2].transform.RotateAround(transform.position, transform.forward, rot); } }
                 break;
             case RubiksCube.move.X:
             case RubiksCube.move.XCC:
-                    rot = dir * angle * delta / rotationTime;
+                    rot = dir * rot;
                 transform.RotateAround(transform.position, transform.right, rot);
                 break;
             case RubiksCube.move.Y:
             case RubiksCube.move.YCC:
-                    rot = dir * angle * delta / rotationTime;
+                    rot = dir * rot;
                 transform.RotateAround(transform.position, transform.up, rot);
                 break;
             case RubiksCube.move.Z:
             case RubiksCube.move.ZCC:
-                    rot = dir * angle * delta / rotationTime;
+                    rot = dir * rot;
                 transform.RotateAround(transform.position, transform.forward, rot);
                 break;
             default:
@@ -162,6 +190,7 @@ public class RubiksCubePrefab : MonoBehaviour {
                 }
             }
         }
+        transform.rotation = Quaternion.identity;
     }
 
     public void RefreshPanels()
