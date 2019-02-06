@@ -38,9 +38,12 @@ public class RubiksCubePrefab : MonoBehaviour {
             }
             cubePrefabMatrix.Add(PrefabRow);
         }
+
+        resetCubePrefabPositions();
+        RefreshPanels();
     }
 
-    private float totalTime = float.MaxValue;
+    bool isAnimInProgress = false;
     void Update()
     {
 
@@ -69,59 +72,41 @@ public class RubiksCubePrefab : MonoBehaviour {
             totalTime = 0.0f;
         }*/
 
-        if(totalTime > rotationTime)
+        if (isAnimInProgress)
         {
-            current = getNextMove();
-                
+            isAnimInProgress = animMove(current);
+        }
+        else if (AnimSeq.Count > 0)
+        {
+            current = AnimSeq.Dequeue();
+            isAnimInProgress = true;
         }
 
-        if(current != RubiksCube.move.NOTHING)
-        {
-            totalTime = animMove(totalTime, current);
-            if(totalTime > rotationTime)
-            {
-                RC.RunCustomSequence(current);
-                resetCubePrefabPositions();
-                RefreshPanels();
-            }
-        }
+        RefreshPanels();
 
     }
 
-    private RubiksCube.move getNextMove()
+    private void updateCube(RubiksCube.move m)
     {
-        if (AnimSeq.Count > 0)
-        {
-            totalTime = 0.0f;
-            return AnimSeq.Dequeue();
-        }
-        totalTime = float.MaxValue;
-        return RubiksCube.move.NOTHING;
+        resetCubePrefabPositions();
+        RC.RunCustomSequence(m);
+        RefreshPanels();
     }
-
     //returns current animation time
-    private float animMove(float t, RubiksCube.move m)
+    private float totalTime = 0.0f;
+    private bool animMove(RubiksCube.move m)
     {
         const float angle = 90.0f;
-
-        if (t < 0.0f) return float.MaxValue;
-
-        //If current time > than animTime, stop anim and update cube faces
-        if(t > rotationTime)
+        float delta = Time.deltaTime;
+        totalTime += delta;
+        if (totalTime < 0.0f || totalTime >= rotationTime || rotationTime <= 0.0f)
         {
-            return float.MaxValue;
+            totalTime = 0.0f;
+            updateCube(m);
+            return false;
         }
 
-        //Else, animate
-        
-        float delta = Time.deltaTime;
-
-        if (rotationTime <= 0.0f)
-            delta = 1.0f;
-        else 
-            delta = delta + t > rotationTime ? (rotationTime - t)/rotationTime: delta/rotationTime;
-
-        float rot = delta * angle;
+        float rot = angle * delta / rotationTime;
 
         float dir = RubiksCube.isClockwise(m) ? -1.0f : 1.0f;
         switch (m)
@@ -159,22 +144,53 @@ public class RubiksCubePrefab : MonoBehaviour {
             case RubiksCube.move.X:
             case RubiksCube.move.XCC:
                     rot = dir * rot;
-                transform.RotateAround(transform.position, transform.right, rot);
+                for (int x = 0; x < 3; x++)
+                {
+                    for (int y = 0; y < 3; y++)
+                    {
+                        for (int z = 0; z < 3; z++)
+                        {
+                            cubePrefabMatrix[x][y][z].transform.RotateAround(transform.position, transform.right, rot);
+                        }
+                    }
+                }
+                //parent rotation is not resetable
+                //transform.RotateAround(transform.position, transform.right, rot);
                 break;
             case RubiksCube.move.Y:
             case RubiksCube.move.YCC:
                     rot = dir * rot;
-                transform.RotateAround(transform.position, transform.up, rot);
+                for (int x = 0; x < 3; x++)
+                {
+                    for (int y = 0; y < 3; y++)
+                    {
+                        for (int z = 0; z < 3; z++)
+                        {
+                            cubePrefabMatrix[x][y][z].transform.RotateAround(transform.position, transform.up, rot);
+                        }
+                    }
+                }
+                //transform.RotateAround(transform.position, transform.up, rot);
                 break;
             case RubiksCube.move.Z:
             case RubiksCube.move.ZCC:
                     rot = dir * rot;
-                transform.RotateAround(transform.position, transform.forward, rot);
+                for (int x = 0; x < 3; x++)
+                {
+                    for (int y = 0; y < 3; y++)
+                    {
+                        for (int z = 0; z < 3; z++)
+                        {
+                            cubePrefabMatrix[x][y][z].transform.RotateAround(transform.position, transform.forward, rot);
+                        }
+                    }
+                }
+                //transform.RotateAround(transform.position, transform.forward, rot);
                 break;
             default:
                 break;
         }
-        return t + delta;
+        return true;
     }
 
     public void resetCubePrefabPositions()
