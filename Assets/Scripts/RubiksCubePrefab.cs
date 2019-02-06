@@ -206,7 +206,6 @@ public class RubiksCubePrefab : MonoBehaviour {
                 }
             }
         }
-        transform.rotation = Quaternion.identity;
     }
 
     public void RefreshPanels()
