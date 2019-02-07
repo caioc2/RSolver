@@ -6,7 +6,6 @@ using MLAgents;
 public class RubiksCubeAgent : Agent {
 
     [Header("Specific to Rubiks Cube")]
-    public GameObject cube;
     private RubiksCubePrefab rcp;
     public int startScramble = 1;
     private int maxScramble = 50;
@@ -15,14 +14,14 @@ public class RubiksCubeAgent : Agent {
 
     public override void InitializeAgent()
     {
-        cube = transform.gameObject;
-        rcp = cube.GetComponent<RubiksCubePrefab>() as RubiksCubePrefab;
-        rcp.RC.Scramble((int)Mathf.Floor(startScramble + Random.value * maxScramble)); 
+        rcp = transform.gameObject.GetComponent<RubiksCubePrefab>() as RubiksCubePrefab;
+        List<RubiksCube.move> move = RubiksCube.randMoveSequence((int)Mathf.Floor(startScramble + Random.value * maxScramble));
+        rcp.addMove(move);
     }
 
     public override void CollectObservations()
     {
-        //AddVectorObs(rcp.RC.getStateAsVec());
+        AddVectorObs(rcp.RC.getStateAsVec());
     }
 
     public override void AgentAction(float[] vectorAction, string textAction)
@@ -32,8 +31,9 @@ public class RubiksCubeAgent : Agent {
 
     public override void AgentReset()
     {
-        //rcp.resetCubePrefabPositions();
-        //rcp.RC.Scramble((int)Mathf.Floor(startScramble + Random.value * maxScramble));
+        rcp.resetCubePrefabPositions();
+        List<RubiksCube.move> move = RubiksCube.randMoveSequence((int)Mathf.Floor(startScramble + Random.value * maxScramble));
+        rcp.addMove(move);
     }
 
 }

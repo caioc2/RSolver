@@ -551,28 +551,31 @@ public class RubiksCube
         return seq.Count;
     }
 
-    public move randChangeMove()
+    public static move randChangeMove()
     {
         return (move)Mathf.Round(Random.value * changeMoveCount - 0.499999f);
     }
 
-    public move randMove()
+    public static move randMove()
     {
         return (move)Mathf.Round(Random.value * moveCount - 0.499999f);
     }
 
     public void Scramble(int turns)
     {
+        RunCustomSequence(randMoveSequence(turns));
 
-        List<move> seq = new List<move>();
+        clearTurnRecord();
+    }
+
+    public static List<move> randMoveSequence(int turns)
+    {
+        List<move> seq = new List<move>(turns);
         for (int i = 0; i < turns; i++)
         {
             seq.Add(randChangeMove());
         }
-
-        RunCustomSequence(seq);
-
-        clearTurnRecord();
+        return seq;
     }
 
     public void clearTurnRecord()

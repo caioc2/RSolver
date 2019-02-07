@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: RubiksCubeLearning
   m_EditorClassIdentifier: 
   brainParameters:
-    vectorObservationSize: 486
+    vectorObservationSize: 324
     numStackedVectorObservations: 1
     vectorActionSize: 0c000000
     cameraResolutions: []

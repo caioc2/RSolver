@@ -5,10 +5,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 407398}
-  - 114: {fileID: 11445522}
+  - component: {fileID: 407398}
+  - component: {fileID: 11445522}
+  - component: {fileID: 114093681563629192}
   m_Layer: 0
   m_Name: RubiksCube
   m_TagString: Untagged
@@ -28,6 +29,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &11445522
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -40,7 +42,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CubePrefab: {fileID: 192468, guid: 9724fe1fcf8e8e24fbeefc4bcd944be4, type: 2}
-  spacing: 1.04999995
+  spacing: 1.05
+  rotationTime: 10
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -52,3 +55,22 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 105848}
   m_IsPrefabParent: 1
+--- !u!114 &114093681563629192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e8223863c9d6e4cac3a23ed2d2e056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
+  agentParameters:
+    agentCameras: []
+    maxStep: 0
+    resetOnDone: 1
+    onDemandDecision: 0
+    numberOfActionsBetweenDecisions: 1
+  startScramble: 1

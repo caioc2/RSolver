@@ -16,8 +16,7 @@ public class RubiksCubePrefab : MonoBehaviour {
     // Use this for initialization
     void Awake () {
         RC = new RubiksCube();
-        //AnimSeq = new Queue<RubiksCube.move>();
-        AnimSeq = new Queue<RubiksCube.move>(new List<RubiksCube.move> { RubiksCube.move.X, RubiksCube.move.Y, RubiksCube.move.Z, RubiksCube.move.XCC, RubiksCube.move.ZCC });
+        AnimSeq = new Queue<RubiksCube.move>();
         current = RubiksCube.move.NOTHING;
         cubePrefabMatrix = new List<List<List<GameObject>>>();
         for (int x = 0; x < 3; x++)
@@ -197,5 +196,13 @@ public class RubiksCubePrefab : MonoBehaviour {
         }
     }
 
+    public void addMove(RubiksCube.move m)
+    {
+        AnimSeq.Enqueue(m);
+    }
 
+    public void addMove(List<RubiksCube.move> m)
+    {
+        for (int i = 0; i < m.Count; ++i) addMove(m[i]);
+    }
 }
