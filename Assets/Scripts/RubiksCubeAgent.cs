@@ -15,10 +15,9 @@ public class RubiksCubeAgent : Agent {
 
     public override void InitializeAgent()
     {
-       // rcp = cube.GetComponent<RubiksCubePrefab>() as RubiksCubePrefab;
-        //Debug.Log(rcp);
-        //Debug.Log(rcp.RC);
-        //rcp.RC.Scramble((int)Mathf.Floor(startScramble + Random.value * maxScramble)); 
+        cube = transform.gameObject;
+        rcp = cube.GetComponent<RubiksCubePrefab>() as RubiksCubePrefab;
+        rcp.RC.Scramble((int)Mathf.Floor(startScramble + Random.value * maxScramble)); 
     }
 
     public override void CollectObservations()

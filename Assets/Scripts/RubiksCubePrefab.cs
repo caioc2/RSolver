@@ -14,7 +14,7 @@ public class RubiksCubePrefab : MonoBehaviour {
     private RubiksCube.move current;
 
     // Use this for initialization
-    void Start () {
+    void Awake () {
         RC = new RubiksCube();
         //AnimSeq = new Queue<RubiksCube.move>();
         AnimSeq = new Queue<RubiksCube.move>(new List<RubiksCube.move> { RubiksCube.move.X, RubiksCube.move.Y, RubiksCube.move.Z, RubiksCube.move.XCC, RubiksCube.move.ZCC });
@@ -46,32 +46,6 @@ public class RubiksCubePrefab : MonoBehaviour {
     bool isAnimInProgress = false;
     void Update()
     {
-
-        /*if (Input.GetKeyDown(KeyCode.Z))
-        {
-            RC.RunCustomSequence(RubiksCube.move.X);
-            resetCubePrefabPositions();
-            RefreshPanels();
-
-        }
-        else if (Input.GetKeyDown(KeyCode.X))
-        {
-            RC.RunCustomSequence(RubiksCube.move.XCC);
-            resetCubePrefabPositions();
-            RefreshPanels();
-        }
-
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            current = RubiksCube.move.X;
-            totalTime = 0.0f;
-        }
-        else if (Input.GetKeyDown(KeyCode.S))
-        {
-            current = RubiksCube.move.XCC;
-            totalTime = 0.0f;
-        }*/
-
         if (isAnimInProgress)
         {
             isAnimInProgress = animMove(current);
@@ -92,6 +66,7 @@ public class RubiksCubePrefab : MonoBehaviour {
         RC.RunCustomSequence(m);
         RefreshPanels();
     }
+
     //returns current animation time
     private float totalTime = 0.0f;
     private bool animMove(RubiksCube.move m)
