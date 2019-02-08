@@ -162,7 +162,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive
@@ -220,7 +220,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive
@@ -278,7 +278,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive
@@ -447,7 +447,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive
@@ -570,7 +570,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive
@@ -624,7 +624,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
@@ -678,7 +678,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive
@@ -736,7 +736,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive
@@ -773,7 +773,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   broadcastHub:
-    broadcastingBrains: []
+    broadcastingBrains:
+    - {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
     _brainsToControl: []
   maxSteps: 0
   trainingConfiguration:
@@ -790,6 +791,7 @@ MonoBehaviour:
     targetFrameRate: 60
   resetParameters:
     resetParameters: []
+  animated: 0
 --- !u!4 &1706088029
 Transform:
   m_ObjectHideFlags: 0
@@ -852,7 +854,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive
@@ -910,7 +912,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive
@@ -968,7 +970,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive
@@ -1026,7 +1028,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive

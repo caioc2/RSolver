@@ -43,7 +43,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CubePrefab: {fileID: 192468, guid: 9724fe1fcf8e8e24fbeefc4bcd944be4, type: 2}
   spacing: 1.05
-  rotationTime: 10
+  rotationTime: 0.5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -74,3 +74,5 @@ MonoBehaviour:
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
   startScramble: 1
+  maxScramble: 50
+  animated: 0

@@ -5,6 +5,7 @@ using MLAgents;
 
 public class RubiksCubeAcademy : Academy
 {
+    public bool animated = false;
     public override void AcademyReset()
     {
 

@@ -6,8 +6,8 @@ public class RubiksCubePrefab : MonoBehaviour {
 
     public GameObject CubePrefab;
 
-    public RubiksCube RC;//the actual rubiks cube data structure
-    public List<List<List<GameObject>>> cubePrefabMatrix;
+    private RubiksCube RC;//the actual rubiks cube data structure
+    private List<List<List<GameObject>>> cubePrefabMatrix;
     public float spacing = 1.05f;
     public float rotationTime = 10.0f;
     private Queue<RubiksCube.move> AnimSeq;
@@ -54,9 +54,6 @@ public class RubiksCubePrefab : MonoBehaviour {
             current = AnimSeq.Dequeue();
             isAnimInProgress = true;
         }
-
-        RefreshPanels();
-
     }
 
     private void updateCube(RubiksCube.move m)
@@ -167,7 +164,7 @@ public class RubiksCubePrefab : MonoBehaviour {
         return true;
     }
 
-    public void resetCubePrefabPositions()
+    private void resetCubePrefabPositions()
     {
         for (int i = 0; i < 3; i++)
         {
@@ -182,7 +179,7 @@ public class RubiksCubePrefab : MonoBehaviour {
         }
     }
 
-    public void RefreshPanels()
+    private void RefreshPanels()
     {
         for (int x = 0; x < 3; x++)
         {
@@ -196,13 +193,56 @@ public class RubiksCubePrefab : MonoBehaviour {
         }
     }
 
-    public void addMove(RubiksCube.move m)
+    public void resetCube()
+    {
+        RC.setDefaultCubeColor();
+        resetCubePrefabPositions();
+        RefreshPanels();
+    }
+
+    public void runAnimatedMove(RubiksCube.move m)
     {
         AnimSeq.Enqueue(m);
     }
 
-    public void addMove(List<RubiksCube.move> m)
+    public void runAnimatedMove(List<RubiksCube.move> m)
     {
-        for (int i = 0; i < m.Count; ++i) addMove(m[i]);
+        for (int i = 0; i < m.Count; ++i) runAnimatedMove(m[i]);
+    }
+
+    public void runMove(RubiksCube.move m)
+    {
+        RC.RunCustomSequence(m);
+        resetCubePrefabPositions();
+        RefreshPanels();
+    }
+
+    public void runMove(List<RubiksCube.move> m)
+    {
+        RC.RunCustomSequence(m);
+        resetCubePrefabPositions();
+        RefreshPanels();
+    }
+
+    public void scramble(int turns)
+    {
+        RC.Scramble(turns);
+        resetCubePrefabPositions();
+        RefreshPanels();
+    }
+
+    public bool isAnimationInProgress()
+    {
+        return isAnimInProgress;
+    }
+
+    public float[] getCubeState()
+    {
+        return RC.getStateAsVec();
+    }
+
+    public bool isSolved()
+    {
+        return RC.isSolved();
     }
 }
