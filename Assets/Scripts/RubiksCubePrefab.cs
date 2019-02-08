@@ -193,13 +193,6 @@ public class RubiksCubePrefab : MonoBehaviour {
         }
     }
 
-    public void resetCube()
-    {
-        RC.setDefaultCubeColor();
-        resetCubePrefabPositions();
-        RefreshPanels();
-    }
-
     public void runAnimatedMove(RubiksCube.move m)
     {
         AnimSeq.Enqueue(m);
@@ -220,6 +213,13 @@ public class RubiksCubePrefab : MonoBehaviour {
     public void runMove(List<RubiksCube.move> m)
     {
         RC.RunCustomSequence(m);
+        resetCubePrefabPositions();
+        RefreshPanels();
+    }
+
+    public void resetCube()
+    {
+        RC.setDefaultCubeColor();
         resetCubePrefabPositions();
         RefreshPanels();
     }

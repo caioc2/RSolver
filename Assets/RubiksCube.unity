@@ -162,10 +162,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -220,10 +245,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -278,10 +328,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -447,10 +522,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -570,10 +670,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -624,7 +749,32 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
@@ -678,10 +828,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -736,10 +911,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -775,12 +975,13 @@ MonoBehaviour:
   broadcastHub:
     broadcastingBrains:
     - {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
-    _brainsToControl: []
-  maxSteps: 0
+    _brainsToControl:
+    - {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
+  maxSteps: 500
   trainingConfiguration:
     width: 80
     height: 80
-    qualityLevel: 1
+    qualityLevel: 0
     timeScale: 100
     targetFrameRate: -1
   inferenceConfiguration:
@@ -854,10 +1055,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -912,10 +1138,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -970,10 +1221,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1028,10 +1304,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: rotationTime
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

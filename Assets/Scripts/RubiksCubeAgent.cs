@@ -33,44 +33,44 @@ public class RubiksCubeAgent : Agent {
         if(vectorAction.Length != 1)
         {
             Debug.LogError("Action vector length != than 1");
-            return;
         }
-        RubiksCube.move m = (RubiksCube.move)vectorAction[0];
+        else
+        { 
+            RubiksCube.move m = (RubiksCube.move)vectorAction[0];
 
-        if(animated)
-        {
-            rcp.runAnimatedMove(m);
-        } else
-        {
-            rcp.runMove(m);
+            if(animated)
+            {
+                rcp.runAnimatedMove(m);
+            } else
+            {
+                rcp.runMove(m);
+            }
+            AddReward(-0.005f);
+
+            if(rcp.isSolved())
+            {
+                AddReward(1.0f);
+                Done();
+            }
         }
-        AddReward(-0.005f);
-
-        if(rcp.isSolved())
-        {
-            AddReward(1.0f);
-            Done();
-        }
-
+        waitRequest = false;
     }
 
     public override void AgentReset()
     {
+        rcp.resetCube();
         rcp.scramble((int)Mathf.Floor(startScramble + Random.value * maxScramble));
+
+    }
+
+    private bool waitRequest = false;
+    public void FixedUpdate()
+    {
+        if(agentParameters.onDemandDecision && !rcp.isAnimationInProgress() && !waitRequest)
+        {
+            RequestDecision();
+            waitRequest = true;
+        }
     }
 
 }
-
-/*[CustomEditor(typeof(RubiksCubeAgent))]
-public class RubiksCubeAgentEditor : Editor
-{
-    public override void OnInspectorGUI()
-    {
-        var myRubiksCubeAgent = target as RubiksCubeAgent;
-
-        myRubiksCubeAgent.agentParameters.onDemandDecision = GUILayout.Toggle(myRubiksCubeAgent.animated);
-
-        if (myRubiksCubeAgent.animated)
-            myRubiksCubeAgent.agentParameters.onDemandDecision = EditorGUILayout.Toggle(false);
-    }
-}*/
