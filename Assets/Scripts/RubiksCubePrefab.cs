@@ -56,13 +56,6 @@ public class RubiksCubePrefab : MonoBehaviour {
         }
     }
 
-    private void updateCube(RubiksCube.move m)
-    {
-        resetCubePrefabPositions();
-        RC.RunCustomSequence(m);
-        RefreshPanels();
-    }
-
     //returns current animation time
     private float totalTime = 0.0f;
     private bool animMove(RubiksCube.move m)
@@ -73,7 +66,7 @@ public class RubiksCubePrefab : MonoBehaviour {
         if (totalTime < 0.0f || totalTime >= rotationTime || rotationTime <= 0.0f)
         {
             totalTime = 0.0f;
-            updateCube(m);
+            runMove(m);
             return false;
         }
 
@@ -236,6 +229,11 @@ public class RubiksCubePrefab : MonoBehaviour {
         return isAnimInProgress;
     }
 
+    public int movesToAnim()
+    {
+        return AnimSeq.Count;
+    }
+
     public float[] getCubeState()
     {
         return RC.getStateAsVec();
@@ -244,5 +242,16 @@ public class RubiksCubePrefab : MonoBehaviour {
     public bool isSolved()
     {
         return RC.isSolved();
+    }
+
+    public float getScore()
+    {
+        int[] s = RC.getScore();
+        float val = 0.0f;
+        for(int i = 0; i < s.Length; ++i)
+        {
+            val += (s[i] + 1.0f) * (1.0f + s[i]) * 0.0005f;
+        }
+        return val;
     }
 }

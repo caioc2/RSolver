@@ -113,6 +113,182 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &34667427
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &50760138
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &53914545
 Prefab:
   m_ObjectHideFlags: 0
@@ -150,7 +326,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_Name
@@ -171,17 +347,17 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: animated
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: maxScramble
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.maxStep
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
@@ -191,7 +367,364 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &73831446
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &89061209
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &240777282
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &289946512
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
@@ -233,7 +766,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_Name
@@ -254,17 +787,17 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: animated
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: maxScramble
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.maxStep
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
@@ -274,7 +807,188 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &430179951
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &684366092
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
@@ -316,7 +1030,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_Name
@@ -337,17 +1051,17 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: animated
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: maxScramble
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.maxStep
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
@@ -357,7 +1071,12 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.resetOnDone
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
@@ -375,6 +1094,7 @@ GameObject:
   - component: {fileID: 727649129}
   - component: {fileID: 727649133}
   - component: {fileID: 727649134}
+  - component: {fileID: 727649135}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -473,6 +1193,105 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2403e8499de08d045ac13eeda2fdf4e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &727649135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 727649128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 383671569d1746b4098ac6379eb00727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &835076043
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &900679221
 Prefab:
   m_ObjectHideFlags: 0
@@ -510,7 +1329,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_Name
@@ -531,17 +1350,17 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: animated
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: maxScramble
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.maxStep
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
@@ -551,7 +1370,364 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &976157651
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1036549515
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1051663781
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1062028604
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
@@ -621,6 +1797,182 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1001 &1102479815
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1128960096
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1157551990
 Prefab:
   m_ObjectHideFlags: 0
@@ -658,7 +2010,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_Name
@@ -679,17 +2031,17 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: animated
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: maxScramble
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.maxStep
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
@@ -699,7 +2051,12 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.resetOnDone
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
@@ -741,7 +2098,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -754,17 +2111,17 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: animated
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: maxScramble
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.maxStep
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
@@ -774,7 +2131,276 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1312494525
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1317230017
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1445706001
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
@@ -816,7 +2442,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_Name
@@ -837,17 +2463,17 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: animated
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: maxScramble
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.maxStep
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
@@ -857,7 +2483,12 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.resetOnDone
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
@@ -899,7 +2530,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_Name
@@ -920,17 +2551,17 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: animated
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: maxScramble
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.maxStep
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
@@ -940,7 +2571,188 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1538470330
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1634976422
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
@@ -975,8 +2787,7 @@ MonoBehaviour:
   broadcastHub:
     broadcastingBrains:
     - {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
-    _brainsToControl:
-    - {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
+    _brainsToControl: []
   maxSteps: 500
   trainingConfiguration:
     width: 80
@@ -987,7 +2798,7 @@ MonoBehaviour:
   inferenceConfiguration:
     width: 1280
     height: 720
-    qualityLevel: 5
+    qualityLevel: 0
     timeScale: 1
     targetFrameRate: 60
   resetParameters:
@@ -1004,8 +2815,184 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1793770429
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1806971465
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1841553571
 Prefab:
   m_ObjectHideFlags: 0
@@ -1043,7 +3030,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_Name
@@ -1064,17 +3051,17 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: animated
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: maxScramble
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.maxStep
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
@@ -1084,7 +3071,100 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1879308327
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
@@ -1126,7 +3206,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_Name
@@ -1147,17 +3227,17 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: animated
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: maxScramble
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.maxStep
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
@@ -1167,7 +3247,100 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1941634791
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_Name
+      value: RubiksCube (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: rotationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: animated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: maxScramble
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.onDemandDecision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
@@ -1209,7 +3382,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_Name
@@ -1230,17 +3403,17 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: animated
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: maxScramble
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.maxStep
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
@@ -1250,7 +3423,12 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.resetOnDone
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
@@ -1292,7 +3470,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_Name
@@ -1313,17 +3491,17 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: animated
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: maxScramble
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.maxStep
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
@@ -1333,7 +3511,12 @@ Prefab:
     - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
       propertyPath: agentParameters.resetOnDone
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
+        type: 2}
+      propertyPath: startScramble
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}

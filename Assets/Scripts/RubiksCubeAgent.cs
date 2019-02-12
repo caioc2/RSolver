@@ -12,14 +12,22 @@ public class RubiksCubeAgent : Agent {
     public int maxScramble = 50;
     public bool animated = false;
 
+    private float rate = 0.95f;
+    private int count = 0;
+    private int count2 = 0;
+    private int steps = 0;
+    private float sc;
+
 
     public override void InitializeAgent()
     {
         rcp = transform.gameObject.GetComponent<RubiksCubePrefab>() as RubiksCubePrefab;
         rcp.scramble((int)Mathf.Floor(startScramble + Random.value * maxScramble));
+        sc = rcp.getScore();
         if(animated)
         {
             agentParameters.onDemandDecision = true;
+            agentParameters.maxStep = 0;
         }
     }
 
@@ -27,9 +35,10 @@ public class RubiksCubeAgent : Agent {
     {
         AddVectorObs(rcp.getCubeState());
     }
-
+    
     public override void AgentAction(float[] vectorAction, string textAction)
     {
+
         if(vectorAction.Length != 1)
         {
             Debug.LogError("Action vector length != than 1");
@@ -37,6 +46,7 @@ public class RubiksCubeAgent : Agent {
         else
         { 
             RubiksCube.move m = (RubiksCube.move)vectorAction[0];
+      
 
             if(animated)
             {
@@ -51,25 +61,56 @@ public class RubiksCubeAgent : Agent {
             {
                 AddReward(1.0f);
                 Done();
+                count++;
+            } else
+            {
+                float score = rcp.getScore();
+                if(sc < score)
+                {
+                    AddReward(0.01f);
+                    sc = score;
+                }
             }
         }
-        waitRequest = false;
     }
 
     public override void AgentReset()
     {
         rcp.resetCube();
         rcp.scramble((int)Mathf.Floor(startScramble + Random.value * maxScramble));
+        sc = rcp.getScore();
+        count2++;
 
+        if(count2 >= 1000)
+        {
+            float p = (float)count / (float)count2;
+
+            Debug.Log("Current rate: " + p + ", current scramble: " + maxScramble);
+            if (p >= rate)
+            {
+                startScramble = maxScramble = Mathf.Min(maxScramble + 1, 30);
+            }
+            count = count2 = 0;
+        }
     }
 
     private bool waitRequest = false;
     public void FixedUpdate()
     {
-        if(agentParameters.onDemandDecision && !rcp.isAnimationInProgress() && !waitRequest)
-        {
-            RequestDecision();
-            waitRequest = true;
+        if (!IsDone() && agentParameters.onDemandDecision) {
+            if(!waitRequest)
+            {
+                RequestDecision();
+                waitRequest = true;
+            }else if (!rcp.isAnimationInProgress() && rcp.movesToAnim() == 0)
+            {
+                waitRequest = false;
+                if(rcp.isSolved())
+                {
+                    Done();
+                    Debug.Log("Solved");
+                }
+            }
         }
     }
 
