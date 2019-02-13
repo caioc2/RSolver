@@ -12,7 +12,7 @@ public class RubiksCubeAgent : Agent {
     public int maxScramble = 50;
     public bool animated = false;
 
-    private float rate = 0.95f;
+    public float rate = 0.95f;
     private int count = 0;
     private int count2 = 0;
     private int steps = 0;
@@ -35,7 +35,9 @@ public class RubiksCubeAgent : Agent {
     {
         AddVectorObs(rcp.getCubeState());
     }
-    
+
+    RubiksCube.move last = RubiksCube.move.NOTHING;
+    int lc = 0;
     public override void AgentAction(float[] vectorAction, string textAction)
     {
 
@@ -46,7 +48,18 @@ public class RubiksCubeAgent : Agent {
         else
         { 
             RubiksCube.move m = (RubiksCube.move)vectorAction[0];
-      
+            if (m == last)
+                lc++;
+            else
+                lc = 0;
+
+            last = m;
+
+            if (lc >= 4)
+            {
+                AddReward(-0.01f);
+                lc = 0;
+            }
 
             if(animated)
             {
@@ -77,6 +90,7 @@ public class RubiksCubeAgent : Agent {
     public override void AgentReset()
     {
         rcp.resetCube();
+        lc = 0;
         rcp.scramble((int)Mathf.Floor(startScramble + Random.value * maxScramble));
         sc = rcp.getScore();
         count2++;
