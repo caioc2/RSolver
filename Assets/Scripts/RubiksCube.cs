@@ -571,9 +571,17 @@ public class RubiksCube
     public static List<move> randMoveSequence(int turns)
     {
         List<move> seq = new List<move>(turns);
-        for (int i = 0; i < turns; i++)
+
+        move last = move.NOTHING;
+        while(seq.Count < turns)
         {
-            seq.Add(randChangeMove());
+            move m = randChangeMove();
+            if(last != getInverse(m))
+            {
+                seq.Add(m);
+                last = m;
+            }
+            
         }
         return seq;
     }

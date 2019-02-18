@@ -48,18 +48,6 @@ public class RubiksCubeAgent : Agent {
         else
         { 
             RubiksCube.move m = (RubiksCube.move)vectorAction[0];
-            if (m == last)
-                lc++;
-            else
-                lc = 0;
-
-            last = m;
-
-            if (lc >= 4)
-            {
-                AddReward(-0.01f);
-                lc = 0;
-            }
 
             if(animated)
             {
