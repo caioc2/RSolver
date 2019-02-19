@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class RubiksCubePrefab : MonoBehaviour {
+public abstract class RubiksCubePrefab : MonoBehaviour {
 
     public GameObject CubePrefab;
 
@@ -15,7 +15,7 @@ public class RubiksCubePrefab : MonoBehaviour {
 
     // Use this for initialization
     void Awake () {
-        RC = new RubiksCube();
+        RC = new RubiksCube3();
         AnimSeq = new Queue<RubiksCube.move>();
         current = RubiksCube.move.NOTHING;
         cubePrefabMatrix = new List<List<List<GameObject>>>();
@@ -246,12 +246,11 @@ public class RubiksCubePrefab : MonoBehaviour {
 
     public float getScore()
     {
-        int[] s = RC.getScore();
-        float val = 0.0f;
-        for(int i = 0; i < s.Length; ++i)
-        {
-            val += (s[i] + 1.0f) * (1.0f + s[i]) * 0.0005f;
-        }
-        return val;
+        return RC.getScore();
+    }
+
+    public int turnCount()
+    {
+        return RC.TurnRecordTokenCount();
     }
 }

@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEditor;
 using MLAgents;
 
-public class RubiksCubeAgent : Agent {
+public class RubiksCubeAgent : Agent
+{
 
     [Header("Specific to Rubiks Cube")]
     private RubiksCubePrefab rcp;
@@ -15,7 +16,6 @@ public class RubiksCubeAgent : Agent {
     public float rate = 0.95f;
     private int count = 0;
     private int count2 = 0;
-    private int steps = 0;
     private float sc;
 
 
@@ -24,7 +24,7 @@ public class RubiksCubeAgent : Agent {
         rcp = transform.gameObject.GetComponent<RubiksCubePrefab>() as RubiksCubePrefab;
         rcp.scramble((int)Mathf.Floor(startScramble + Random.value * maxScramble));
         sc = rcp.getScore();
-        if(animated)
+        if (animated)
         {
             agentParameters.onDemandDecision = true;
             agentParameters.maxStep = 0;
@@ -36,37 +36,37 @@ public class RubiksCubeAgent : Agent {
         AddVectorObs(rcp.getCubeState());
     }
 
-    RubiksCube.move last = RubiksCube.move.NOTHING;
-    int lc = 0;
     public override void AgentAction(float[] vectorAction, string textAction)
     {
 
-        if(vectorAction.Length != 1)
+        if (vectorAction.Length != 1)
         {
             Debug.LogError("Action vector length != than 1");
         }
         else
-        { 
+        {
             RubiksCube.move m = (RubiksCube.move)vectorAction[0];
 
-            if(animated)
+            if (animated)
             {
                 rcp.runAnimatedMove(m);
-            } else
+            }
+            else
             {
                 rcp.runMove(m);
             }
             AddReward(-0.005f);
 
-            if(rcp.isSolved())
+            if (rcp.isSolved())
             {
                 AddReward(1.0f);
                 Done();
                 count++;
-            } else
+            }
+            else
             {
                 float score = rcp.getScore();
-                if(sc < score)
+                if (sc < score)
                 {
                     AddReward(0.01f);
                     sc = score;
@@ -78,12 +78,11 @@ public class RubiksCubeAgent : Agent {
     public override void AgentReset()
     {
         rcp.resetCube();
-        lc = 0;
         rcp.scramble((int)Mathf.Floor(startScramble + Random.value * maxScramble));
         sc = rcp.getScore();
         count2++;
 
-        if(count2 >= 1000)
+        if (count2 >= 100)
         {
             float p = (float)count / (float)count2;
 
@@ -99,21 +98,22 @@ public class RubiksCubeAgent : Agent {
     private bool waitRequest = false;
     public void FixedUpdate()
     {
-        if (!IsDone() && agentParameters.onDemandDecision) {
-            if(!waitRequest)
+        if (!IsDone() && agentParameters.onDemandDecision)
+        {
+            if (!waitRequest)
             {
                 RequestDecision();
                 waitRequest = true;
-            }else if (!rcp.isAnimationInProgress() && rcp.movesToAnim() == 0)
+            }
+            else if (!rcp.isAnimationInProgress() && rcp.movesToAnim() == 0)
             {
                 waitRequest = false;
-                if(rcp.isSolved())
+                if (rcp.isSolved())
                 {
                     Done();
-                    Debug.Log("Solved");
+                    Debug.Log("Solved in: " + rcp.turnCount() + " moves.");
                 }
             }
         }
     }
-
 }
