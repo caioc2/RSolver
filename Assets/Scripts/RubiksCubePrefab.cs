@@ -14,21 +14,42 @@ public abstract class RubiksCubePrefab : MonoBehaviour
     protected Queue<RubiksCube.move> AnimSeq;
     protected RubiksCube.move current;
 
-    protected abstract void resetCubePrefabPositions();
+    protected int getNCubes()
+    {
+        return RC.getNCubes();
+    }
 
-    protected abstract void RefreshPanels();
+    protected void initCube()
+    {
+        AnimSeq = new Queue<RubiksCube.move>();
+        current = RubiksCube.move.NOTHING;
+        cubePrefabMatrix = new List<List<List<GameObject>>>();
 
-    protected abstract void rotateRight(float angle);
+        runAnimatedMove(RubiksCube.randMoveSequence(100));
 
-    protected abstract void rotateLeft(float angle);
+        float displacement = (getNCubes() - 1.0f) / 2.0f;
 
-    protected abstract void rotateTop(float angle);
-
-    protected abstract void rotateBottom(float angle);
-
-    protected abstract void rotateFront(float angle);
-
-    protected abstract void rotateBack(float angle);
+        for (int x = 0; x < getNCubes(); x++)
+        {
+            List<List<GameObject>> PrefabRow = new List<List<GameObject>>();
+            for (int y = 0; y < getNCubes(); y++)
+            {
+                List<GameObject> PrefabColumn = new List<GameObject>();
+                for (int z = 0; z < getNCubes(); z++)
+                {
+                    GameObject cubePrefab = Instantiate(CubePrefab, Vector3.zero, Quaternion.identity) as GameObject;
+                    cubePrefab.transform.SetParent(transform);
+                    cubePrefab.transform.position = new Vector3((x - displacement), (y - displacement), (z - displacement)) * spacing + transform.position;
+                    cubePrefab.GetComponent<CubePrefab>().refreshPanels(RC.cubeMatrix[x][y][z]);
+                    PrefabColumn.Add(cubePrefab);
+                }
+                PrefabRow.Add(PrefabColumn);
+            }
+            cubePrefabMatrix.Add(PrefabRow);
+        }
+        resetCubePrefabPositions();
+        RefreshPanels();
+    }
 
     bool isAnimInProgress = false;
     void Update()
@@ -96,53 +117,124 @@ public abstract class RubiksCubePrefab : MonoBehaviour
             case RubiksCube.move.X:
             case RubiksCube.move.XCC:
                 rot = dir * rot;
-                for (int x = 0; x < cubePrefabMatrix.Count; x++)
-                {
-                    for (int y = 0; y < cubePrefabMatrix[x].Count; y++)
-                    {
-                        for (int z = 0; z < cubePrefabMatrix[x][y].Count; z++)
-                        {
-                            cubePrefabMatrix[x][y][z].transform.RotateAround(transform.position, transform.right, rot);
-                        }
-                    }
-                }
-                //parent rotation is not resetable
-                //transform.RotateAround(transform.position, transform.right, rot);
+                rotateX(rot);
                 break;
             case RubiksCube.move.Y:
             case RubiksCube.move.YCC:
                 rot = dir * rot;
-                for (int x = 0; x < cubePrefabMatrix.Count; x++)
-                {
-                    for (int y = 0; y < cubePrefabMatrix[x].Count; y++)
-                    {
-                        for (int z = 0; z < cubePrefabMatrix[x][y].Count; z++)
-                        {
-                            cubePrefabMatrix[x][y][z].transform.RotateAround(transform.position, transform.up, rot);
-                        }
-                    }
-                }
-                //transform.RotateAround(transform.position, transform.up, rot);
+                rotateY(rot);
                 break;
             case RubiksCube.move.Z:
             case RubiksCube.move.ZCC:
                 rot = dir * rot;
-                for (int x = 0; x < cubePrefabMatrix.Count; x++)
-                {
-                    for (int y = 0; y < cubePrefabMatrix[x].Count; y++)
-                    {
-                        for (int z = 0; z < cubePrefabMatrix[x][y].Count; z++)
-                        {
-                            cubePrefabMatrix[x][y][z].transform.RotateAround(transform.position, transform.forward, rot);
-                        }
-                    }
-                }
-                //transform.RotateAround(transform.position, transform.forward, rot);
+                rotateZ(rot);
                 break;
             default:
                 break;
         }
         return true;
+    }
+
+    protected void RefreshPanels()
+    {
+        for (int x = 0; x < getNCubes(); x++)
+        {
+            for (int y = 0; y < getNCubes(); y++)
+            {
+                for (int z = 0; z < getNCubes(); z++)
+                {
+                    cubePrefabMatrix[x][y][z].GetComponent<CubePrefab>().refreshPanels(RC.cubeMatrix[x][y][z]);
+                }
+            }
+        }
+    }
+
+    protected  void resetCubePrefabPositions()
+    {
+        float displacement = (getNCubes() - 1.0f) / 2.0f;
+        for (int i = 0; i < getNCubes(); i++)
+        {
+            for (int j = 0; j < getNCubes(); j++)
+            {
+                for (int k = 0; k < getNCubes(); k++)
+                {
+                    cubePrefabMatrix[i][j][k].transform.position = new Vector3((i - displacement), (j - displacement), (k - displacement)) * spacing + transform.position;
+                    cubePrefabMatrix[i][j][k].transform.rotation = Quaternion.identity;
+                }
+            }
+        }
+    }
+
+    protected void rotateRight(float angle)
+    {
+        for (int i = 0; i < getNCubes(); i++) { for (int j = 0; j < getNCubes(); j++) { cubePrefabMatrix[getNCubes() - 1][i][j].transform.RotateAround(transform.position, transform.right, angle); } }
+    }
+
+    protected void rotateLeft(float angle)
+    {
+        for (int i = 0; i < getNCubes(); i++) { for (int j = 0; j < getNCubes(); j++) { cubePrefabMatrix[0][i][j].transform.RotateAround(transform.position, transform.right, angle); } }
+    }
+
+    protected void rotateTop(float angle)
+    {
+        for (int i = 0; i < getNCubes(); i++) { for (int j = 0; j < getNCubes(); j++) { cubePrefabMatrix[i][getNCubes() - 1][j].transform.RotateAround(transform.position, transform.up, angle); } }
+    }
+
+    protected  void rotateBottom(float angle)
+    {
+        for (int i = 0; i < getNCubes(); i++) { for (int j = 0; j < getNCubes(); j++) { cubePrefabMatrix[i][0][j].transform.RotateAround(transform.position, transform.up, angle); } }
+    }
+
+    protected void rotateFront(float angle)
+    {
+        for (int i = 0; i < getNCubes(); i++) { for (int j = 0; j < getNCubes(); j++) { cubePrefabMatrix[i][j][0].transform.RotateAround(transform.position, transform.forward, angle); } }
+    }
+
+    protected void rotateBack(float angle)
+    {
+        for (int i = 0; i < getNCubes(); i++) { for (int j = 0; j < getNCubes(); j++) { cubePrefabMatrix[i][j][getNCubes() - 1].transform.RotateAround(transform.position, transform.forward, angle); } }
+    }
+
+    protected void rotateX(float angle)
+    {
+        for (int x = 0; x < getNCubes(); x++)
+        {
+            for (int y = 0; y < getNCubes(); y++)
+            {
+                for (int z = 0; z < getNCubes(); z++)
+                {
+                    cubePrefabMatrix[x][y][z].transform.RotateAround(transform.position, transform.right, angle);
+                }
+            }
+        }
+    }
+
+    protected void rotateY(float angle)
+    {
+        for (int x = 0; x < getNCubes(); x++)
+        {
+            for (int y = 0; y < getNCubes(); y++)
+            {
+                for (int z = 0; z < getNCubes(); z++)
+                {
+                    cubePrefabMatrix[x][y][z].transform.RotateAround(transform.position, transform.up, angle);
+                }
+            }
+        }
+    }
+
+    protected void rotateZ(float angle)
+    {
+        for (int x = 0; x < getNCubes(); x++)
+        {
+            for (int y = 0; y < getNCubes(); y++)
+            {
+                for (int z = 0; z < getNCubes(); z++)
+                {
+                    cubePrefabMatrix[x][y][z].transform.RotateAround(transform.position, transform.forward, angle);
+                }
+            }
+        }
     }
 
     public void runAnimatedMove(RubiksCube.move m)

@@ -22,7 +22,7 @@ public class RubiksCubeAgent : Agent
     public override void InitializeAgent()
     {
         rcp = transform.gameObject.GetComponent<RubiksCubePrefab>() as RubiksCubePrefab;
-        rcp.scramble((int)Mathf.Floor(startScramble + Random.value * maxScramble));
+        rcp.scramble((int)Mathf.Max(0.0f, Mathf.Floor(startScramble + Random.value * (maxScramble-startScramble))));
         sc = rcp.getScore();
         if (animated)
         {

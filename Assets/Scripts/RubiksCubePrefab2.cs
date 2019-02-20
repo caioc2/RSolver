@@ -2,12 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class RubiksCubePrefab3 : RubiksCubePrefab
+public class RubiksCubePrefab2 : RubiksCubePrefab
 {
     // Use this for initialization
     void Awake()
     {
-        RC = new RubiksCube3();  
+        RC = new RubiksCube2();
         initCube();
     }
 }

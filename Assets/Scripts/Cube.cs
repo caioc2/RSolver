@@ -91,6 +91,15 @@ public class Cube
         }
     }
 
+    public void rotateYCC()
+    {
+        List<colorEnum> oldColors = getColors();
+        for (int i = 0; i < 4; i++)
+        {
+            setSideColor((sides)i, oldColors[(i + 3) % 4]);
+        }
+    }
+
     public void rotateX()
     {
         List<colorEnum> oldColors = getColors();
@@ -101,6 +110,16 @@ public class Cube
         setSideColor(sides.FRONT, oldColors[(int)sides.BOTTOM]);
     }
 
+    public void rotateXCC()
+    {
+        List<colorEnum> oldColors = getColors();
+
+        setSideColor(sides.TOP, oldColors[(int)sides.BACK]);
+        setSideColor(sides.BACK, oldColors[(int)sides.BOTTOM]);
+        setSideColor(sides.BOTTOM, oldColors[(int)sides.FRONT]);
+        setSideColor(sides.FRONT, oldColors[(int)sides.TOP]);
+    }
+
     public void rotateZ()
     {
         List<colorEnum> oldColors = getColors();
@@ -109,6 +128,16 @@ public class Cube
         setSideColor(sides.RIGHT, oldColors[(int)sides.TOP]);
         setSideColor(sides.BOTTOM, oldColors[(int)sides.RIGHT]);
         setSideColor(sides.LEFT, oldColors[(int)sides.BOTTOM]);
+    }
+
+    public void rotateZCC()
+    {
+        List<colorEnum> oldColors = getColors();
+
+        setSideColor(sides.TOP, oldColors[(int)sides.RIGHT]);
+        setSideColor(sides.RIGHT, oldColors[(int)sides.BOTTOM]);
+        setSideColor(sides.BOTTOM, oldColors[(int)sides.LEFT]);
+        setSideColor(sides.LEFT, oldColors[(int)sides.TOP]);
     }
 
     public void setSideColor(sides side, colorEnum c)
