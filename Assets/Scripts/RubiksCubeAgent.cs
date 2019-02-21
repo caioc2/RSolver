@@ -11,6 +11,7 @@ public class RubiksCubeAgent : Agent
     private RubiksCubePrefab rcp;
     public int startScramble = 1;
     public int maxScramble = 50;
+    public int interval = 100;
     public bool animated = false;
 
     public float rate = 0.95f;
@@ -55,22 +56,13 @@ public class RubiksCubeAgent : Agent
             {
                 rcp.runMove(m);
             }
-            AddReward(-0.005f);
+            AddReward(-0.015f);
 
             if (rcp.isSolved())
             {
                 AddReward(1.0f);
                 Done();
                 count++;
-            }
-            else
-            {
-                float score = rcp.getScore();
-                if (sc < score)
-                {
-                    AddReward(0.01f);
-                    sc = score;
-                }
             }
         }
     }
@@ -82,14 +74,14 @@ public class RubiksCubeAgent : Agent
         sc = rcp.getScore();
         count2++;
 
-        if (count2 >= 100)
+        if (count2 >= interval)
         {
             float p = (float)count / (float)count2;
 
             Debug.Log("Current rate: " + p + ", current scramble: " + maxScramble);
             if (p >= rate)
             {
-                startScramble = maxScramble = Mathf.Min(maxScramble + 1, 30);
+                startScramble = maxScramble = Mathf.Min(maxScramble + 1, 50);
             }
             count = count2 = 0;
         }

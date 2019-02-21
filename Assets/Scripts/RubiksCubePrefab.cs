@@ -25,8 +25,6 @@ public abstract class RubiksCubePrefab : MonoBehaviour
         current = RubiksCube.move.NOTHING;
         cubePrefabMatrix = new List<List<List<GameObject>>>();
 
-        runAnimatedMove(RubiksCube.randMoveSequence(100));
-
         float displacement = (getNCubes() - 1.0f) / 2.0f;
 
         for (int x = 0; x < getNCubes(); x++)

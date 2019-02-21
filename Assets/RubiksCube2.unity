@@ -168,7 +168,37 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: rate
-      value: 0.92
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: startScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maxScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: interval
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -228,7 +258,37 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: rate
-      value: 0.92
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: startScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maxScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: interval
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -288,7 +348,37 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: rate
-      value: 0.92
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: startScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maxScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: interval
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -348,7 +438,37 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: rate
-      value: 0.92
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: startScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maxScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: interval
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -408,7 +528,37 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: rate
-      value: 0.92
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: startScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maxScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: interval
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -468,7 +618,37 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: rate
-      value: 0.92
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: startScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maxScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: interval
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -503,7 +683,8 @@ MonoBehaviour:
   broadcastHub:
     broadcastingBrains:
     - {fileID: 11400000, guid: 5a47544622681804f9d2f5eefe22a2ce, type: 2}
-    _brainsToControl: []
+    _brainsToControl:
+    - {fileID: 11400000, guid: 5a47544622681804f9d2f5eefe22a2ce, type: 2}
   maxSteps: 5000
   trainingConfiguration:
     width: 80
@@ -733,7 +914,37 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: rate
-      value: 0.92
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: startScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maxScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: interval
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -794,7 +1005,37 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: rate
-      value: 0.92
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: startScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maxScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: interval
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -854,7 +1095,37 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: rate
-      value: 0.92
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: startScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maxScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: interval
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -914,7 +1185,37 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: rate
-      value: 0.92
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: startScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maxScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: interval
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -974,7 +1275,37 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: rate
-      value: 0.92
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: startScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maxScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: interval
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -1034,7 +1365,37 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: rate
-      value: 0.92
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.maxStep
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: agentParameters.resetOnDone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: animated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: startScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maxScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: interval
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
