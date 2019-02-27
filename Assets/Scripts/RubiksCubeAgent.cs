@@ -9,25 +9,23 @@ public class RubiksCubeAgent : Agent
 
     [Header("Specific to Rubiks Cube")]
     private RubiksCubePrefab rcp;
-    public int startScramble = 1;
-    public int maxScramble = 50;
+    public int numScramble = 1;
     public int interval = 100;
     public bool animated = false;
 
     public float rate = 0.95f;
-    private int count = 0;
-    private int count2 = 0;
-    private float sc;
+    private int solveCount = 0;
+    private int resetCount = 0;
 
 
     public override void InitializeAgent()
     {
         rcp = transform.gameObject.GetComponent<RubiksCubePrefab>() as RubiksCubePrefab;
-        rcp.scramble((int)Mathf.Max(0.0f, Mathf.Floor(startScramble + Random.value * (maxScramble-startScramble))));
-        sc = rcp.getScore();
+        rcp.scramble(numScramble);
         if (animated)
         {
             agentParameters.onDemandDecision = true;
+            agentParameters.resetOnDone = false;
             agentParameters.maxStep = 0;
         }
     }
@@ -62,7 +60,7 @@ public class RubiksCubeAgent : Agent
             {
                 AddReward(1.0f);
                 Done();
-                count++;
+                incSolvedCount();
             }
         }
     }
@@ -70,20 +68,19 @@ public class RubiksCubeAgent : Agent
     public override void AgentReset()
     {
         rcp.resetCube();
-        rcp.scramble((int)Mathf.Floor(startScramble + Random.value * maxScramble));
-        sc = rcp.getScore();
-        count2++;
+        rcp.scramble(numScramble);
+        incResetCount();
 
-        if (count2 >= interval)
+        if (getResetCount() >= interval)
         {
-            float p = (float)count / (float)count2;
+            float p = getSolveRate();
 
-            Debug.Log("Current rate: " + p + ", current scramble: " + maxScramble);
+            Debug.Log("Current rate: " + p + ", current scramble: " + numScramble);
             if (p >= rate)
             {
-                startScramble = maxScramble = Mathf.Min(maxScramble + 1, 50);
+                numScramble = Mathf.Min(numScramble + 1, 50);
             }
-            count = count2 = 0;
+            resetCounters();
         }
     }
 
@@ -107,5 +104,33 @@ public class RubiksCubeAgent : Agent
                 }
             }
         }
+    }
+
+    private void incResetCount()
+    {
+        resetCount++;
+    }
+    private void incSolvedCount()
+    {
+        solveCount++;
+    }
+
+    private int getResetCount()
+    {
+        return resetCount;
+    }
+    private int getSolvedCount()
+    {
+        return solveCount;
+    }
+
+    private float getSolveRate()
+    {
+        return 1.0f * solveCount / (1.0f * resetCount);
+    }
+
+    private void resetCounters()
+    {
+        resetCount = solveCount = 0;
     }
 }

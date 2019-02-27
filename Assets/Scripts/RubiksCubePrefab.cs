@@ -11,6 +11,7 @@ public abstract class RubiksCubePrefab : MonoBehaviour
     protected List<List<List<GameObject>>> cubePrefabMatrix;
     public float spacing = 1.05f;
     public float rotationTime = 10.0f;
+    public bool DrawCubes = true;
     protected Queue<RubiksCube.move> AnimSeq;
     protected RubiksCube.move current;
 
@@ -39,6 +40,7 @@ public abstract class RubiksCubePrefab : MonoBehaviour
                     cubePrefab.transform.SetParent(transform);
                     cubePrefab.transform.position = new Vector3((x - displacement), (y - displacement), (z - displacement)) * spacing + transform.position;
                     cubePrefab.GetComponent<CubePrefab>().refreshPanels(RC.cubeMatrix[x][y][z]);
+                    cubePrefab.SetActive(DrawCubes);
                     PrefabColumn.Add(cubePrefab);
                 }
                 PrefabRow.Add(PrefabColumn);

@@ -188,17 +188,27 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: startScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maxScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: interval
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: numScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: DrawCubes
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -278,17 +288,27 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: startScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maxScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: interval
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: numScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: DrawCubes
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -368,17 +388,27 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: startScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maxScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: interval
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: numScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: DrawCubes
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -458,17 +488,27 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: startScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maxScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: interval
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: numScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: DrawCubes
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -548,17 +588,27 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: startScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maxScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: interval
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: numScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: DrawCubes
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -638,17 +688,27 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: startScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maxScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: interval
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: numScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: DrawCubes
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -685,7 +745,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 5a47544622681804f9d2f5eefe22a2ce, type: 2}
     _brainsToControl:
     - {fileID: 11400000, guid: 5a47544622681804f9d2f5eefe22a2ce, type: 2}
-  maxSteps: 5000
+  maxSteps: 0
   trainingConfiguration:
     width: 80
     height: 80
@@ -934,17 +994,27 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: startScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maxScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: interval
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: numScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: DrawCubes
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -1025,17 +1095,27 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: startScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maxScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: interval
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: numScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: DrawCubes
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -1115,17 +1195,27 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: startScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maxScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: interval
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: numScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: DrawCubes
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -1205,17 +1295,27 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: startScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maxScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: interval
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: numScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: DrawCubes
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -1295,17 +1395,27 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: startScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maxScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: interval
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: numScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: DrawCubes
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -1385,17 +1495,27 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: startScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maxScramble
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: interval
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: numScramble
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: DrawCubes
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
