@@ -264,7 +264,6 @@ public abstract class RubiksCube
     public void Scramble(int turns)
     {
         RunCustomSequence(randMoveSequence(turns));
-
         clearTurnRecord();
     }
 

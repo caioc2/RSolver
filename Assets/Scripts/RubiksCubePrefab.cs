@@ -266,6 +266,7 @@ public abstract class RubiksCubePrefab : MonoBehaviour
         RC.setDefaultCubeColor();
         resetCubePrefabPositions();
         RefreshPanels();
+        RC.clearTurnRecord();
     }
 
     public void scramble(int turns)

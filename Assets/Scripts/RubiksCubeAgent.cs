@@ -13,13 +13,18 @@ public class RubiksCubeAgent : Agent
     public int interval = 100;
     public bool animated = false;
 
-    public float rate = 0.95f;
+    public float minSolveRate = 0.95f;
+    public float maxMoveRate = 1.10f;
     private int solveCount = 0;
     private int resetCount = 0;
+    private int totalMoves = 0;
+
+    private RubiksCubeAcademy academy;
 
 
     public override void InitializeAgent()
     {
+        academy = FindObjectOfType<RubiksCubeAcademy>();
         rcp = transform.gameObject.GetComponent<RubiksCubePrefab>() as RubiksCubePrefab;
         rcp.scramble(numScramble);
         if (animated)
@@ -54,7 +59,7 @@ public class RubiksCubeAgent : Agent
             {
                 rcp.runMove(m);
             }
-            AddReward(-0.015f);
+            AddReward(-0.1f);
 
             if (rcp.isSolved())
             {
@@ -67,18 +72,22 @@ public class RubiksCubeAgent : Agent
 
     public override void AgentReset()
     {
+        totalMoves += rcp.turnCount();
+
         rcp.resetCube();
         rcp.scramble(numScramble);
         incResetCount();
+        
 
         if (getResetCount() >= interval)
         {
             float p = getSolveRate();
+            float l = 1.0f * totalMoves / (1.0f * interval);
 
-            Debug.Log("Current rate: " + p + ", current scramble: " + numScramble);
-            if (p >= rate)
+            Debug.Log("Solve rate: " + p + " , Avg Len: " + l + " Scramble: " + numScramble);
+            if (l < numScramble * maxMoveRate && minSolveRate < p)
             {
-                numScramble = Mathf.Min(numScramble + 1, 50);
+                numScramble = Mathf.Min(numScramble + 1,  50);
             }
             resetCounters();
         }
@@ -131,6 +140,6 @@ public class RubiksCubeAgent : Agent
 
     private void resetCounters()
     {
-        resetCount = solveCount = 0;
+        resetCount = solveCount = totalMoves = 0;
     }
 }

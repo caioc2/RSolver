@@ -145,14 +145,15 @@ MonoBehaviour:
   brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
   agentParameters:
     agentCameras: []
-    maxStep: 100
+    maxStep: 50
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  numScramble: 1
-  interval: 50
+  numScramble: 6
+  interval: 500
   animated: 0
-  rate: 0.95
+  minSolveRate: 0.97
+  maxMoveRate: 1.1
 --- !u!114 &358468097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,14 +338,15 @@ MonoBehaviour:
   brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
   agentParameters:
     agentCameras: []
-    maxStep: 100
+    maxStep: 50
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  numScramble: 1
-  interval: 50
+  numScramble: 6
+  interval: 500
   animated: 0
-  rate: 0.95
+  minSolveRate: 0.97
+  maxMoveRate: 1.1
 --- !u!114 &811062382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,14 +408,15 @@ MonoBehaviour:
   brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
   agentParameters:
     agentCameras: []
-    maxStep: 100
+    maxStep: 50
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  numScramble: 1
-  interval: 50
+  numScramble: 6
+  interval: 500
   animated: 0
-  rate: 0.95
+  minSolveRate: 0.97
+  maxMoveRate: 1.1
 --- !u!114 &812481458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -475,14 +478,15 @@ MonoBehaviour:
   brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
   agentParameters:
     agentCameras: []
-    maxStep: 100
+    maxStep: 50
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  numScramble: 1
-  interval: 50
+  numScramble: 6
+  interval: 500
   animated: 0
-  rate: 0.95
+  minSolveRate: 0.97
+  maxMoveRate: 1.1
 --- !u!114 &891747060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,14 +548,15 @@ MonoBehaviour:
   brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
   agentParameters:
     agentCameras: []
-    maxStep: 100
+    maxStep: 50
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  numScramble: 1
-  interval: 50
+  numScramble: 6
+  interval: 500
   animated: 0
-  rate: 0.95
+  minSolveRate: 0.97
+  maxMoveRate: 1.1
 --- !u!114 &973590882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,14 +618,15 @@ MonoBehaviour:
   brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
   agentParameters:
     agentCameras: []
-    maxStep: 100
+    maxStep: 50
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  numScramble: 1
-  interval: 50
+  numScramble: 6
+  interval: 500
   animated: 0
-  rate: 0.95
+  minSolveRate: 0.97
+  maxMoveRate: 1.1
 --- !u!114 &1004321936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -747,14 +753,15 @@ MonoBehaviour:
   brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
   agentParameters:
     agentCameras: []
-    maxStep: 100
+    maxStep: 50
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  numScramble: 1
-  interval: 50
+  numScramble: 6
+  interval: 500
   animated: 0
-  rate: 0.95
+  minSolveRate: 0.97
+  maxMoveRate: 1.1
 --- !u!114 &1077254205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -816,14 +823,15 @@ MonoBehaviour:
   brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
   agentParameters:
     agentCameras: []
-    maxStep: 100
+    maxStep: 50
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  numScramble: 1
-  interval: 50
+  numScramble: 6
+  interval: 500
   animated: 0
-  rate: 0.95
+  minSolveRate: 0.97
+  maxMoveRate: 1.1
 --- !u!114 &1144905102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,14 +893,15 @@ MonoBehaviour:
   brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
   agentParameters:
     agentCameras: []
-    maxStep: 100
+    maxStep: 50
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  numScramble: 1
-  interval: 50
+  numScramble: 6
+  interval: 500
   animated: 0
-  rate: 0.95
+  minSolveRate: 0.97
+  maxMoveRate: 1.1
 --- !u!114 &1187925653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -954,14 +963,15 @@ MonoBehaviour:
   brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
   agentParameters:
     agentCameras: []
-    maxStep: 100
+    maxStep: 50
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  numScramble: 1
-  interval: 50
+  numScramble: 6
+  interval: 500
   animated: 0
-  rate: 0.95
+  minSolveRate: 0.97
+  maxMoveRate: 1.1
 --- !u!114 &1473137727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1083,14 +1093,15 @@ MonoBehaviour:
   brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
   agentParameters:
     agentCameras: []
-    maxStep: 100
+    maxStep: 50
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  numScramble: 1
-  interval: 50
+  numScramble: 6
+  interval: 500
   animated: 0
-  rate: 0.95
+  minSolveRate: 0.97
+  maxMoveRate: 1.1
 --- !u!114 &1799131714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1152,14 +1163,15 @@ MonoBehaviour:
   brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
   agentParameters:
     agentCameras: []
-    maxStep: 100
+    maxStep: 50
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  numScramble: 1
-  interval: 50
+  numScramble: 6
+  interval: 500
   animated: 0
-  rate: 0.95
+  minSolveRate: 0.97
+  maxMoveRate: 1.1
 --- !u!114 &1984640989
 MonoBehaviour:
   m_ObjectHideFlags: 0
