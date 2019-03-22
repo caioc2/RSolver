@@ -21,15 +21,14 @@ public class RubiksCubeAgentPerfTest : Agent
     private int minMoves = Int32.MaxValue;
     private int maxMoves = 0;
     private int totalMoves = 0;
-    FileStream file;
-    StreamWriter writer;
 
     public override void InitializeAgent()
     {
         rcp = transform.gameObject.GetComponent<RubiksCubePrefab>() as RubiksCubePrefab;
-        file = File.Open(Application.dataPath + "/stats.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-        writer = new StreamWriter(file);
-        writer.WriteLine("ScrambleDepth  SolveRate AvgMoves MinMoves MaxMoves");
+        using (StreamWriter writer = new StreamWriter(File.Open(Application.dataPath + "/stats.txt", FileMode.Append, FileAccess.Write)))
+        {
+            writer.WriteLine("ScrambleDepth  SolveRate AvgMoves MinMoves MaxMoves");
+        }
     }
 
     public override void CollectObservations()
@@ -42,17 +41,14 @@ public class RubiksCubeAgentPerfTest : Agent
 
         if (vectorAction.Length != 1)
         {
-            Debug.LogError("Action vector length != than 1");
+            Debug.LogError("Action vector length != 1");
         }
         else
         {
             RubiksCube.move m = (RubiksCube.move)vectorAction[0];
             rcp.runMove(m);
-            AddReward(-0.015f);
-
             if (rcp.isSolved())
             {
-                AddReward(1.0f);
                 Done();
                 incSolvedCount();
             }
@@ -84,9 +80,12 @@ public class RubiksCubeAgentPerfTest : Agent
         if (getResetCount() >= interval)
         {
             float solveRate = getSolveRate();
-            float avgMoves = 1.0f * totalMoves / (1.0f * solveCount);
+            float avgMoves = solveCount > 0 ? 1.0f * totalMoves / (1.0f * solveCount): 0;
 
-            writer.WriteLine(curScramble + " " + solveRate + " " + avgMoves + " " + minMoves + " " + maxMoves);
+           using (StreamWriter writer = new StreamWriter(File.Open(Application.dataPath + "/stats.txt", FileMode.Append, FileAccess.Write)))
+            {
+                writer.WriteLine(curScramble + " " + solveRate + " " + avgMoves + " " + minMoves + " " + maxMoves);
+            }
             Debug.Log(curScramble + " " + solveRate + " " + avgMoves + " " + minMoves + " " + maxMoves);
 
             minMoves = Int32.MaxValue;
@@ -94,9 +93,9 @@ public class RubiksCubeAgentPerfTest : Agent
             totalMoves = 0;
             resetCounters();
             curScramble++;
+
             if (curScramble > maxScramble)
             {
-                writer.Close();
                 agentParameters.resetOnDone = false;
                 Debug.Log("Finished generating stats!");
             }

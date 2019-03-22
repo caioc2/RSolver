@@ -59,7 +59,7 @@ public class RubiksCubeAgent : Agent
             {
                 rcp.runMove(m);
             }
-            AddReward(-0.1f);
+            AddReward(-0.01f);
 
             if (rcp.isSolved())
             {

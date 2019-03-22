@@ -235,7 +235,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114565390964863790, guid: 2932d75b410c50742b8fc901f71b4898,
         type: 2}
@@ -363,7 +363,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   broadcastHub:
-    broadcastingBrains: []
+    broadcastingBrains:
+    - {fileID: 11400000, guid: 5a47544622681804f9d2f5eefe22a2ce, type: 2}
+    - {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
     _brainsToControl: []
   maxSteps: 0
   trainingConfiguration:
@@ -410,7 +412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1565180440
 MonoBehaviour:
   m_ObjectHideFlags: 0
