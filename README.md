@@ -14,7 +14,7 @@ Among the changes made are:
 
 ## Results
 
-After training for about 3 hours on a notebook CPU we are able to solve the 2x2 cube with any scramble depth with average solve length of ~26 moves, within a day of training we were able to achieve an average solve length of ~17 moves which is close to the gods number for 2x2 cube which is 14 quarter turn moves.
+After training for about 3 hours on a notebook CPU we were able to solve the 2x2 cube with any scramble depth with average solve length of ~26 moves, within a day of training we were able to achieve an average solve length of ~17 moves which is close to the gods number for 2x2 cube which is 14 quarter turn moves.
 
 ![2x2 cube result](/docs/images/2x2.png)
 
@@ -63,6 +63,7 @@ So far the later also tried the method on 2x2 cubes and it couldn't consistently
 
 Solving the cube can be think of 
 > "At each step chose the move that decreases the number of following moves needed to get to the solved state".
+
 As much as we don't know how many moves away one state is from solved, this thinking implies that: *Any cube state that is N moves away from the solution necessarily needs to pass through states which are (N-1), (N-2),..., 1 moves away from the solution*.
 
 This is a great thing, we can decompose our solve process backward and create a [learning curriculum](https://qmro.qmul.ac.uk/xmlui/bitstream/handle/123456789/15972/Bengio%2C%202009%20Curriculum%20Learning.pdf?sequence=1&isAllowed=y). The main idea is to teach the agent to solve cubes starting with 1 move away and increasing it till N moves. This solves the problem of sparse rewards, or not being able to give rewards/classify intermediate states until reaching the solution.
@@ -72,3 +73,22 @@ Our criteria for this curriculum were:
 * Solve length rate - *ck* moves needed to solve *k* scramble depth.
 
 We don't know how to generate cubes with **exact** *k* moves away from solution, but applying a random sequence of *k* moves to a solved cube guarantees that this cube is *k* or less moves away from solved, which is good enough for our needs.
+
+## Experiments
+
+For our experiments we used:
+
+|Program  |Version   |     |Hardware |Model      |     |Parameters   |Value      |
+|--------:|---------:|----:|--------:|----------:|----:|------------:|----------:|
+|ML-Agents|0.7       |     |CPU      |i7 7700QH  |     |Learning Rate|5e-5       |
+|Unity    |2018.1.9f2|     |GPU      |GTX 1060 6G|     |Batch Size   |32         |
+|Windows  |10.0.17134|     |RAM      |16GB       |     |Epoch        |5          |
+
+*All training were made using CPU only, for our network and batch size we hadn't enough data to flood the GPU, hence using CPU only was faster.*
+
+Number of units per layer   |  Number of layers
+:--------------------------:|:-------------------------:
+![](/docs/images/ep-len.png)|![](/docs/images/ep-len2.png)
+
+
+
