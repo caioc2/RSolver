@@ -22,13 +22,16 @@ public class RubiksCubeAgentPerfTest : Agent
     private int maxMoves = 0;
     private int totalMoves = 0;
 
+    private List<int> mc;
+
     public override void InitializeAgent()
     {
         rcp = transform.gameObject.GetComponent<RubiksCubePrefab>() as RubiksCubePrefab;
         using (StreamWriter writer = new StreamWriter(File.Open(Application.dataPath + "/stats.txt", FileMode.Append, FileAccess.Write)))
         {
-            writer.WriteLine("ScrambleDepth  SolveRate AvgMoves MinMoves MaxMoves");
+            writer.WriteLine("ScrambleDepth  SolveRate MedianMoves AvgMoves MinMoves MaxMoves");
         }
+        mc = new List<int>();
     }
 
     public override void CollectObservations()
@@ -69,6 +72,7 @@ public class RubiksCubeAgentPerfTest : Agent
         if(moveCount <= agentParameters.maxStep)
         {
             totalMoves += moveCount;
+            mc.Add(moveCount);
             minMoves = Mathf.Min(minMoves, moveCount);
             maxMoves = Mathf.Max(maxMoves, moveCount);
         }
@@ -81,12 +85,15 @@ public class RubiksCubeAgentPerfTest : Agent
         {
             float solveRate = getSolveRate();
             float avgMoves = solveCount > 0 ? 1.0f * totalMoves / (1.0f * solveCount): 0;
+            mc.Sort();
+            int median = mc[mc.Count / 2];
+            mc.Clear();
 
            using (StreamWriter writer = new StreamWriter(File.Open(Application.dataPath + "/stats.txt", FileMode.Append, FileAccess.Write)))
             {
-                writer.WriteLine(curScramble + " " + solveRate + " " + avgMoves + " " + minMoves + " " + maxMoves);
+                writer.WriteLine(curScramble + " " + solveRate + " " + median + " " + avgMoves + " " + minMoves + " " + maxMoves);
             }
-            Debug.Log(curScramble + " " + solveRate + " " + avgMoves + " " + minMoves + " " + maxMoves);
+            Debug.Log(curScramble + " " + solveRate + " " + median + " " + avgMoves + " " + minMoves + " " + maxMoves);
 
             minMoves = Int32.MaxValue;
             maxMoves = 0;

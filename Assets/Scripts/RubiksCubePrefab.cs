@@ -276,6 +276,13 @@ public abstract class RubiksCubePrefab : MonoBehaviour
         RefreshPanels();
     }
 
+    public void scramble(int turns, int []mask)
+    {
+        RC.Scramble(turns, mask);
+        resetCubePrefabPositions();
+        RefreshPanels();
+    }
+
     public bool isAnimationInProgress()
     {
         return isAnimInProgress;

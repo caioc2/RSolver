@@ -19,4 +19,5 @@ MonoBehaviour:
     vectorActionDescriptions:
     - Cube Move
     vectorActionSpaceType: 0
-  model: {fileID: 4900000, guid: 5e962d5cb808673458070bc6c50feb28, type: 3}
+  model: {fileID: 11400000, guid: 33e44552eca6a1e4487c0c5b7fb39a68, type: 3}
+  inferenceDevice: 0

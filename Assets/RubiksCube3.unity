@@ -145,14 +145,15 @@ MonoBehaviour:
   brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
   agentParameters:
     agentCameras: []
-    maxStep: 50
+    maxStep: 100
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
   numScramble: 1
-  interval: 2000
+  interval: 500
   animated: 0
-  minSolveRate: 0
+  maskAction: 0
+  minSolveRate: 0.97
   maxMoveRate: 100
 --- !u!114 &358468097
 MonoBehaviour:
@@ -338,14 +339,15 @@ MonoBehaviour:
   brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
   agentParameters:
     agentCameras: []
-    maxStep: 50
+    maxStep: 100
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
   numScramble: 1
-  interval: 2000
+  interval: 500
   animated: 0
-  minSolveRate: 0
+  maskAction: 0
+  minSolveRate: 0.97
   maxMoveRate: 100
 --- !u!114 &811062382
 MonoBehaviour:
@@ -375,76 +377,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &812481456
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 812481459}
-  - component: {fileID: 812481458}
-  - component: {fileID: 812481457}
-  m_Layer: 0
-  m_Name: RubiksCube (11)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &812481457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 812481456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2e8223863c9d6e4cac3a23ed2d2e056, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
-  agentParameters:
-    agentCameras: []
-    maxStep: 50
-    resetOnDone: 1
-    onDemandDecision: 0
-    numberOfActionsBetweenDecisions: 1
-  numScramble: 1
-  interval: 2000
-  animated: 0
-  minSolveRate: 0
-  maxMoveRate: 100
---- !u!114 &812481458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 812481456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e3cd57d1140bce44ace3aebfb20e9cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CubePrefab: {fileID: 192468, guid: 9724fe1fcf8e8e24fbeefc4bcd944be4, type: 2}
-  spacing: 1.05
-  rotationTime: 0.05
-  DrawCubes: 0
---- !u!4 &812481459
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 812481456}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 12, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &891747058
 GameObject:
@@ -478,14 +410,15 @@ MonoBehaviour:
   brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
   agentParameters:
     agentCameras: []
-    maxStep: 50
+    maxStep: 100
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
   numScramble: 1
-  interval: 2000
+  interval: 500
   animated: 0
-  minSolveRate: 0
+  maskAction: 0
+  minSolveRate: 0.97
   maxMoveRate: 100
 --- !u!114 &891747060
 MonoBehaviour:
@@ -548,14 +481,15 @@ MonoBehaviour:
   brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
   agentParameters:
     agentCameras: []
-    maxStep: 50
+    maxStep: 100
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
   numScramble: 1
-  interval: 2000
+  interval: 500
   animated: 0
-  minSolveRate: 0
+  maskAction: 0
+  minSolveRate: 0.97
   maxMoveRate: 100
 --- !u!114 &973590882
 MonoBehaviour:
@@ -618,14 +552,15 @@ MonoBehaviour:
   brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
   agentParameters:
     agentCameras: []
-    maxStep: 50
+    maxStep: 100
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
   numScramble: 1
-  interval: 2000
+  interval: 500
   animated: 0
-  minSolveRate: 0
+  maskAction: 0
+  minSolveRate: 0.97
   maxMoveRate: 100
 --- !u!114 &1004321936
 MonoBehaviour:
@@ -753,14 +688,15 @@ MonoBehaviour:
   brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
   agentParameters:
     agentCameras: []
-    maxStep: 50
+    maxStep: 100
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
   numScramble: 1
-  interval: 2000
+  interval: 500
   animated: 0
-  minSolveRate: 0
+  maskAction: 0
+  minSolveRate: 0.97
   maxMoveRate: 100
 --- !u!114 &1077254205
 MonoBehaviour:
@@ -823,14 +759,15 @@ MonoBehaviour:
   brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
   agentParameters:
     agentCameras: []
-    maxStep: 50
+    maxStep: 100
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
   numScramble: 1
-  interval: 2000
+  interval: 500
   animated: 0
-  minSolveRate: 0
+  maskAction: 0
+  minSolveRate: 0.97
   maxMoveRate: 100
 --- !u!114 &1144905102
 MonoBehaviour:
@@ -893,14 +830,15 @@ MonoBehaviour:
   brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
   agentParameters:
     agentCameras: []
-    maxStep: 50
+    maxStep: 100
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
   numScramble: 1
-  interval: 2000
+  interval: 500
   animated: 0
-  minSolveRate: 0
+  maskAction: 0
+  minSolveRate: 0.97
   maxMoveRate: 100
 --- !u!114 &1187925653
 MonoBehaviour:
@@ -930,76 +868,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1473137725
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1473137728}
-  - component: {fileID: 1473137727}
-  - component: {fileID: 1473137726}
-  m_Layer: 0
-  m_Name: RubiksCube (10)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1473137726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1473137725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2e8223863c9d6e4cac3a23ed2d2e056, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
-  agentParameters:
-    agentCameras: []
-    maxStep: 50
-    resetOnDone: 1
-    onDemandDecision: 0
-    numberOfActionsBetweenDecisions: 1
-  numScramble: 1
-  interval: 2000
-  animated: 0
-  minSolveRate: 0
-  maxMoveRate: 100
---- !u!114 &1473137727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1473137725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e3cd57d1140bce44ace3aebfb20e9cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CubePrefab: {fileID: 192468, guid: 9724fe1fcf8e8e24fbeefc4bcd944be4, type: 2}
-  spacing: 1.05
-  rotationTime: 0.05
-  DrawCubes: 0
---- !u!4 &1473137728
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1473137725}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: 12, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1706088027
 GameObject:
@@ -1060,144 +928,4 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1799131712
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1799131715}
-  - component: {fileID: 1799131714}
-  - component: {fileID: 1799131713}
-  m_Layer: 0
-  m_Name: RubiksCube (8)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1799131713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1799131712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2e8223863c9d6e4cac3a23ed2d2e056, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
-  agentParameters:
-    agentCameras: []
-    maxStep: 50
-    resetOnDone: 1
-    onDemandDecision: 0
-    numberOfActionsBetweenDecisions: 1
-  numScramble: 1
-  interval: 2000
-  animated: 0
-  minSolveRate: 0
-  maxMoveRate: 100
---- !u!114 &1799131714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1799131712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e3cd57d1140bce44ace3aebfb20e9cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CubePrefab: {fileID: 192468, guid: 9724fe1fcf8e8e24fbeefc4bcd944be4, type: 2}
-  spacing: 1.05
-  rotationTime: 0.05
-  DrawCubes: 0
---- !u!4 &1799131715
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1799131712}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18, y: 12, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1984640987
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 105848, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1984640990}
-  - component: {fileID: 1984640989}
-  - component: {fileID: 1984640988}
-  m_Layer: 0
-  m_Name: RubiksCube (9)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1984640988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114093681563629192, guid: 2932d75b410c50742b8fc901f71b4898,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1984640987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2e8223863c9d6e4cac3a23ed2d2e056, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
-  agentParameters:
-    agentCameras: []
-    maxStep: 50
-    resetOnDone: 1
-    onDemandDecision: 0
-    numberOfActionsBetweenDecisions: 1
-  numScramble: 1
-  interval: 2000
-  animated: 0
-  minSolveRate: 0
-  maxMoveRate: 100
---- !u!114 &1984640989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1984640987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e3cd57d1140bce44ace3aebfb20e9cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CubePrefab: {fileID: 192468, guid: 9724fe1fcf8e8e24fbeefc4bcd944be4, type: 2}
-  spacing: 1.05
-  rotationTime: 0.05
-  DrawCubes: 0
---- !u!4 &1984640990
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 407398, guid: 2932d75b410c50742b8fc901f71b4898, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1984640987}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12, y: 12, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

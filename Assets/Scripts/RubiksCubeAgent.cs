@@ -12,6 +12,7 @@ public class RubiksCubeAgent : Agent
     public int numScramble = 1;
     public int interval = 100;
     public bool animated = false;
+    public bool maskAction = false;
 
     public float minSolveRate = 0.95f;
     public float maxMoveRate = 1.10f;
@@ -24,9 +25,15 @@ public class RubiksCubeAgent : Agent
 
     public override void InitializeAgent()
     {
-        academy = FindObjectOfType<RubiksCubeAcademy>();
         rcp = transform.gameObject.GetComponent<RubiksCubePrefab>() as RubiksCubePrefab;
-        rcp.scramble(numScramble);
+        if(maskAction)
+        {
+            rcp.scramble(numScramble, new int[] { 0, 1, 6, 7, 10, 11 });
+        } else
+        {
+            rcp.scramble(numScramble);
+        }
+        
         if (animated)
         {
             agentParameters.onDemandDecision = true;
@@ -38,6 +45,10 @@ public class RubiksCubeAgent : Agent
     public override void CollectObservations()
     {
         AddVectorObs(rcp.getCubeState());
+        if(maskAction && rcp.GetType() == typeof(RubiksCubePrefab2))
+        {
+            SetActionMask(0, new int[] { 2, 3, 4, 5, 8, 9 });
+        }
     }
 
     public override void AgentAction(float[] vectorAction, string textAction)
@@ -75,7 +86,14 @@ public class RubiksCubeAgent : Agent
         totalMoves += rcp.turnCount();
 
         rcp.resetCube();
-        rcp.scramble(numScramble);
+        if (maskAction)
+        {
+            rcp.scramble(numScramble, new int[] { 0, 1, 6, 7, 10, 11 });
+        }
+        else
+        {
+            rcp.scramble(numScramble);
+        }
         incResetCount();
         
 

@@ -220,6 +220,11 @@ Prefab:
       propertyPath: maxMoveRate
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maskAction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
   m_IsPrefabParent: 0
@@ -329,6 +334,11 @@ Prefab:
         type: 2}
       propertyPath: maxMoveRate
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maskAction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -440,6 +450,11 @@ Prefab:
       propertyPath: maxMoveRate
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maskAction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
   m_IsPrefabParent: 0
@@ -549,6 +564,11 @@ Prefab:
         type: 2}
       propertyPath: maxMoveRate
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maskAction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -660,6 +680,11 @@ Prefab:
       propertyPath: maxMoveRate
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maskAction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
   m_IsPrefabParent: 0
@@ -769,6 +794,11 @@ Prefab:
         type: 2}
       propertyPath: maxMoveRate
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maskAction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -1086,6 +1116,11 @@ Prefab:
       propertyPath: maxMoveRate
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maskAction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
   m_IsPrefabParent: 0
@@ -1197,6 +1232,11 @@ Prefab:
       propertyPath: maxMoveRate
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maskAction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
   m_IsPrefabParent: 0
@@ -1306,6 +1346,11 @@ Prefab:
         type: 2}
       propertyPath: maxMoveRate
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maskAction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -1417,6 +1462,11 @@ Prefab:
       propertyPath: maxMoveRate
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maskAction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
   m_IsPrefabParent: 0
@@ -1527,6 +1577,11 @@ Prefab:
       propertyPath: maxMoveRate
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maskAction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
   m_IsPrefabParent: 0
@@ -1636,6 +1691,11 @@ Prefab:
         type: 2}
       propertyPath: maxMoveRate
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
+        type: 2}
+      propertyPath: maskAction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}

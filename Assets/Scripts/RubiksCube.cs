@@ -11,8 +11,8 @@ public abstract class RubiksCube
         RIGHT = 0, RIGHTCC = 1, LEFT = 2, LEFTCC = 3, TOP = 4, TOPCC = 5, BOTTOM = 6, BOTTOMCC = 7, FRONT = 8, FRONTCC = 9, BACK = 10, BACKCC = 11,
         X = 12, XCC = 13, Y = 14, YCC = 15, Z = 16, ZCC = 17, NOTHING = 18
     };
-    public static int moveCount = 19; //total move count
-    public static int changeMoveCount = 12; //total moves which change cube configuration
+    public  const int moveCount = 19; //total move count
+    public  const int changeMoveCount = 12; //total moves which change cube configuration
     public List<List<List<Cube>>> cubeMatrix;
     public List<move> turnRecord;
 
@@ -251,9 +251,9 @@ public abstract class RubiksCube
         return seq.Count;
     }
 
-    public static move randChangeMove()
+    public static move randChangeMove(int count = changeMoveCount)
     {
-        return (move)Mathf.Round(Random.value * changeMoveCount - 0.499999f);
+        return (move)Mathf.Round(Random.value * count - 0.499999f);
     }
 
     public static move randMove()
@@ -267,6 +267,12 @@ public abstract class RubiksCube
         clearTurnRecord();
     }
 
+    public void Scramble(int turns, int[] mask)
+    {
+        RunCustomSequence(randMoveSequence(turns, mask));
+        clearTurnRecord();
+    }
+
     public static List<move> randMoveSequence(int turns)
     {
         List<move> seq = new List<move>(turns);
@@ -275,6 +281,24 @@ public abstract class RubiksCube
         while (seq.Count < turns)
         {
             move m = randChangeMove();
+            if (last != getInverse(m))
+            {
+                seq.Add(m);
+                last = m;
+            }
+
+        }
+        return seq;
+    }
+
+    public static List<move> randMoveSequence(int turns, int[] mask)
+    {
+        List<move> seq = new List<move>(turns);
+
+        move last = move.NOTHING;
+        while (seq.Count < turns)
+        {
+            move m = (move)mask[Mathf.Min((int)randChangeMove(mask.Length), mask.Length - 1)];
             if (last != getInverse(m))
             {
                 seq.Add(m);
