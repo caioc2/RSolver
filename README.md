@@ -86,9 +86,16 @@ For our experiments we used:
 
 *All training were made using CPU only, for our network and batch size we hadn't enough data to flood the GPU, hence using CPU only was faster.*
 
+### 2x2 Cube
+
 Number of units per layer   |  Number of layers
 :--------------------------:|:-------------------------:
 ![](/docs/images/ep-len.png)|![](/docs/images/ep-len2.png)
 
+For both figures lower values indicates better result (less steps to solve the cube). The last peak in the episode length indicates the completion of the curriculum, equivalently after that point any cube would be solved consistently. All networks were able to solve the 2x2 cube.
+In the left we see the comparison of the number of units per layer using 2 layers. Clearly increasing the number of units improves the training. In the right there is the comparison of the number of layers using 512 units per layer. It also increases decreases the final episode length but takes more time to complete the curriculum with 8 layers.
 
 
+### 3x3 Cube
+
+*In progress*
