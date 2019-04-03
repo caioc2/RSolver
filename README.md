@@ -51,7 +51,7 @@ Finally there is another scene `RubiksCube2PerfTest` which you can run to collec
 
 The 2x2 cube is far easier than its 3x3 counterpart. Its state space is approx. 3.6e6 while the 3x3 is aprox. 4.3e19, nevertheless it still an interesting puzzle. Various challenges are presented by these puzzles, among them are:
 
-* Discrete state space and action
+* Discrete action and state space
 * Unknown direct algorithm to optimally solve it, yet there are algorithms using search and other techniques to solve it optimally or very close to it.
 * Compact representation of state space is hard, for example our representation of 2x2 space is 2^144, which is approx. 2.2e43 while the state space is much smaller 3.6e6.
 * Sparse reward system. It's not trivial to evaluate how good or close to the solution one configuration is. Given that positive reward is only assigned when the cube is solved.
@@ -103,6 +103,8 @@ The learning rate initially could be greater, but after the initial adjustment o
 Another important parameter is the agent `maximum episode length`. We set it to `100` steps per episode. It may sounds inefficient to let an agent do 100 steps while it was for example one move away from the solution, but it is really important to explore both bad and good moves, lowering it made the learning slow down. Last but not least, the `interval` in which is calculated the statistics and increased (or not) the curriculum has some effects on the result. Smaller (50) finishes the curriculum faster but tends to need more moves than larger (500) interval after the same number of iterations. This is mostly because the curriculum was increased before the agent truly completing it because of high variance in the statistics used and being stuck in a sub-optimum.
 
 ### 2x2 Cube
+
+The following figure shows the effect of different network layouts in the episode length.
 
 Number of units per layer   |  Number of layers
 :--------------------------:|:-------------------------:
