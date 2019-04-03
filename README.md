@@ -1,4 +1,6 @@
 # RSolver
+
+![](/docs/images/rc.png)
 An experiment with Rubiks cube 2x2 and 3x3 solver using deep reinforcement learning in Unity with [ML-Agents](https://github.com/Unity-Technologies/ml-agents). It's my first attempt with RL and those experiments helped me understanding the theory and practice.
 
 The base repository was forked from https://github.com/stuartsoft/RSolver which implements a deterministic solver.
@@ -25,7 +27,7 @@ The artificial neural network used was pretty simple, 2 hidden layers with 512 u
 First you need to clone this repository and also the [ML-Agents](https://github.com/Unity-Technologies/ml-agents)(we use the 0.7 version). Next you need to copy the files from
 `ML-Agents/UnitySDK/Assets/*` to `RSolver/Assets/`.
 
-You can train the 2x2 cube with the scene `RubiksCube2` and the 3x3 with the `RubiksCube3` following the [documentation of ML-Agents for training](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-ML-Agents.md). Other than that the agents (cubes in the scene) have adjustable parameters, they are:
+You can train the 2x2 cube with the scene `RubiksCube2` and the 3x3 with the `RubiksCube3` following the [documentation of ML-Agents for training](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-ML-Agents.md). Other than that the agents (cubes in the scene) have adjustable parameters which are not implemented in the original ML-Agents agent, they are:
 
 * `Num Scramble` - The starting number of scramble applied to the cube
 * `Min Solve Rate` - Minimum solve rate to increase the `Num Scramble`
@@ -45,9 +47,9 @@ About the cube drawing animation:
 
 Finally there is another scene `RubiksCube2PerfTest` which you can run to collect statistics of performance for each scramble depth of a trained model like solve rate, median moves, average moves, maximum and minimum moves.
 
-# The Pocket/Rubik's Cube Problem
+# The Rubik's Cube Problem
 
-The 2x2 pocket cube is far easier than its 3x3 counterpart. Its state space is approx. 3.6e6 while the 3x3 is aprox. 4.3e19, nevertheless it still an interesting puzzle. Various challenges are presented by these puzzles, among them are:
+The 2x2 cube is far easier than its 3x3 counterpart. Its state space is approx. 3.6e6 while the 3x3 is aprox. 4.3e19, nevertheless it still an interesting puzzle. Various challenges are presented by these puzzles, among them are:
 
 * Discrete state space and action
 * Unknown direct algorithm to optimally solve it, yet there are algorithms using search and other techniques to solve it optimally or very close to it.
@@ -74,17 +76,31 @@ Our criteria for this curriculum were:
 
 We don't know how to generate cubes with **exact** *k* moves away from solution, but applying a random sequence of *k* moves to a solved cube guarantees that this cube is *k* or less moves away from solved, which is good enough for our needs.
 
+## Implementation
+
+The most relevant for RL is the file `/RSolver/Assets/Scripts/RubiksCubeAgent.cs`. It implements the reward system *-0.01* every step and *+1* when solved and also our curriculum, which could not be done with the curriculum framework of ML-Agents. Yet, this file is extremely simple. Everything else is the Rubik's cube representation and animation in Unity.
+
+So far this specific problem doesn't need anything special from Unity, like physics simulation or other complex things, but it reflects a problem that is challenging and a simple way to overcome it (At least in its 2x2 form).
+
 ## Experiments
 
 For our experiments we used:
 
-|Program  |Version   |     |Hardware |Model      |     |Parameters   |Value      |
-|--------:|---------:|----:|--------:|----------:|----:|------------:|----------:|
-|ML-Agents|0.7       |     |CPU      |i7 7700QH  |     |Learning Rate|5e-5       |
-|Unity    |2018.1.9f2|     |GPU      |GTX 1060 6G|     |Batch Size   |32         |
-|Windows  |10.0.17134|     |RAM      |16GB       |     |Epoch        |5          |
+|Program  |Version   |     |Hardware |Model      |     |Parameters    |Value      |
+|--------:|---------:|----:|--------:|----------:|----:|-------------:|----------:|
+|ML-Agents|0.7       |     |CPU      |i7 7700QH  |     |Learning Rate |5e-5       |
+|Unity    |2018.1.9f2|     |GPU      |GTX 1060 6G|     |Batch Size    |32         |
+|Windows  |10.0.17134|     |RAM      |16GB       |     |Epoch         |5          |
+|         |          |     |         |           |     |Episode Length|100        |
+|         |          |     |         |           |     |Interval      |500        |
 
 *All training were made using CPU only, for our network and batch size we hadn't enough data to flood the GPU, hence using CPU only was faster.*
+
+From our tests using a smaller batch size (32) helps in the convergence and faster completion of the curriculum. Larger batch sizes tends to "average" too much the agent experience and not learning anything at all, given that both our state space and actions are discrete and the representation of two states with one move away from each other can be pretty different.
+
+The learning rate initially could be greater, but after the initial adjustment of the network weights it would make the the training unstable as we want to add knowledge and not replace it with the curriculum.
+
+Another important parameter is the agent `maximum episode length`. We set it to `100` steps per episode. It may sounds inefficient to let an agent do 100 steps while it was for example one move away from the solution, but it is really important to explore both bad and good moves, lowering it made the learning slow down. Last but not least, the `interval` in which is calculated the statistics and increased (or not) the curriculum has some effects on the result. Smaller (50) finishes the curriculum faster but tends to need more moves than larger (500) interval after the same number of iterations. This is mostly because the curriculum was increased before the agent truly completing it because of high variance in the statistics used and being stuck in a sub-optimum.
 
 ### 2x2 Cube
 
@@ -92,10 +108,12 @@ Number of units per layer   |  Number of layers
 :--------------------------:|:-------------------------:
 ![](/docs/images/ep-len.png)|![](/docs/images/ep-len2.png)
 
-For both figures lower values indicates better result (less steps to solve the cube). The last peak in the episode length indicates the completion of the curriculum, equivalently after that point any cube would be solved consistently. All networks were able to solve the 2x2 cube.
-In the left we see the comparison of the number of units per layer using 2 layers. Clearly increasing the number of units improves the training. In the right there is the comparison of the number of layers using 512 units per layer. It also increases decreases the final episode length but takes more time to complete the curriculum with 8 layers.
+For both figures, lower values indicates better result (less steps to solve the cube). The last peak in the episode length indicates the completion of the curriculum, equivalently after that point any cube would be solved consistently. All networks were able to solve the 2x2 cube.
+In the left we see the comparison of the number of units per layer using 2 layers. Clearly increasing the number of units improves the training. In the right there is the comparison of the number of layers using 512 units per layer. It also decreases the final episode length but takes more time to complete the curriculum with 8 layers.
 
 
+The result of training using the aforementioned parameters after 1e7 iterations can be seen in the following figure. Up to 5 moves away from the solution it can solve with the same move count. After that it increases faster than the scramble depth but stabilizes in ~17 moves for scramble depth > 20.
+![2x2 cube result](/docs/images/2x2.png)
 ### 3x3 Cube
 
 *In progress*
