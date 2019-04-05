@@ -20,7 +20,7 @@ After training for about 3 hours on a notebook CPU we were able to solve the 2x2
 
 ![2x2 cube result](/docs/images/2x2.png)
 
-The artificial neural network used was pretty simple, 2 hidden layers with 512 units each. More details about training procedures can be found in the following text. You can test the DRL solver online [here](/docs/game/index.html).
+The artificial neural network used was pretty simple, 2 hidden layers with 512 units each. More details about training procedures can be found in the following text. You can test the DRL solver online [here](https://caioc2.github.io/RSolver/game/).
 
 ## Usage
 
