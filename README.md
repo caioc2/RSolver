@@ -20,7 +20,7 @@ After training for about 3 hours on a notebook CPU we were able to solve the 2x2
 
 ![2x2 cube result](/docs/images/2x2.png)
 
-The artificial neural network used was pretty simple, 2 hidden layers with 512 units each. More details about training procedures can be found in the following text. You can test the DRL solver online [here](). *(Will be available soon)*
+The artificial neural network used was pretty simple, 2 hidden layers with 512 units each. More details about training procedures can be found in the following text. You can test the DRL solver online [here](/docs/game/index.html).
 
 ## Usage
 
@@ -94,7 +94,7 @@ For our experiments we used:
 |         |          |     |         |           |     |Episode Length|100        |
 |         |          |     |         |           |     |Interval      |500        |
 
-*All training were made using CPU only, for our network and batch size we hadn't enough data to flood the GPU, hence using CPU only was faster.*
+*All training were made using CPU only, for our network and batch size we hadn't enough data to flood the GPU, hence using CPU alone was faster.*
 
 From our tests using a smaller batch size (32) helps in the convergence and faster completion of the curriculum. Larger batch sizes tends to "average" too much the agent experience and not learning anything at all, given that both our state space and actions are discrete and the representation of two states with one move away from each other can be pretty different.
 

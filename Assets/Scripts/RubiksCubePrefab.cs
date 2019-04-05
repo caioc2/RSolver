@@ -38,7 +38,8 @@ public abstract class RubiksCubePrefab : MonoBehaviour
                 {
                     GameObject cubePrefab = Instantiate(CubePrefab, Vector3.zero, Quaternion.identity) as GameObject;
                     cubePrefab.transform.SetParent(transform);
-                    cubePrefab.transform.position = new Vector3((x - displacement), (y - displacement), (z - displacement)) * spacing + transform.position;
+                    cubePrefab.transform.localPosition = new Vector3((x - displacement), (y - displacement), (z - displacement)) * spacing;
+                    cubePrefab.transform.localScale = Vector3.one;
                     cubePrefab.GetComponent<CubePrefab>().refreshPanels(RC.cubeMatrix[x][y][z]);
                     cubePrefab.SetActive(DrawCubes);
                     PrefabColumn.Add(cubePrefab);
@@ -158,8 +159,8 @@ public abstract class RubiksCubePrefab : MonoBehaviour
             {
                 for (int k = 0; k < getNCubes(); k++)
                 {
-                    cubePrefabMatrix[i][j][k].transform.position = new Vector3((i - displacement), (j - displacement), (k - displacement)) * spacing + transform.position;
-                    cubePrefabMatrix[i][j][k].transform.rotation = Quaternion.identity;
+                    cubePrefabMatrix[i][j][k].transform.localPosition = new Vector3((i - displacement), (j - displacement), (k - displacement)) * spacing + transform.localPosition;
+                    cubePrefabMatrix[i][j][k].transform.localRotation = Quaternion.identity;
                 }
             }
         }
