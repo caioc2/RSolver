@@ -264,6 +264,9 @@ public abstract class RubiksCubePrefab : MonoBehaviour
 
     public void resetCube()
     {
+        AnimSeq.Clear();
+        current = RubiksCube.move.NOTHING;
+        isAnimInProgress = false;
         RC.setDefaultCubeColor();
         resetCubePrefabPositions();
         RefreshPanels();
