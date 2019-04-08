@@ -115,6 +115,21 @@ public abstract class RubiksCubePrefab : MonoBehaviour
                 rot = -dir * rot;
                 rotateBack(rot);
                 break;
+            case RubiksCube.move.MIDX:
+            case RubiksCube.move.MIDXCC:
+                rot = dir * rot;
+                rotateMidX(rot);
+                break;
+            case RubiksCube.move.MIDY:
+            case RubiksCube.move.MIDYCC:
+                rot = dir * rot;
+                rotateMidY(rot);
+                break;
+            case RubiksCube.move.MIDZ:
+            case RubiksCube.move.MIDZCC:
+                rot = dir * rot;
+                rotateMidZ(rot);
+                break;
             case RubiksCube.move.X:
             case RubiksCube.move.XCC:
                 rot = dir * rot;
@@ -159,7 +174,7 @@ public abstract class RubiksCubePrefab : MonoBehaviour
             {
                 for (int k = 0; k < getNCubes(); k++)
                 {
-                    cubePrefabMatrix[i][j][k].transform.localPosition = new Vector3((i - displacement), (j - displacement), (k - displacement)) * spacing + transform.localPosition;
+                    cubePrefabMatrix[i][j][k].transform.localPosition = new Vector3((i - displacement), (j - displacement), (k - displacement)) * spacing;
                     cubePrefabMatrix[i][j][k].transform.localRotation = Quaternion.identity;
                 }
             }
@@ -194,6 +209,21 @@ public abstract class RubiksCubePrefab : MonoBehaviour
     protected void rotateBack(float angle)
     {
         for (int i = 0; i < getNCubes(); i++) { for (int j = 0; j < getNCubes(); j++) { cubePrefabMatrix[i][j][getNCubes() - 1].transform.RotateAround(transform.position, transform.forward, angle); } }
+    }
+
+    protected void rotateMidZ(float angle)
+    {
+        for (int i = 0; i < getNCubes(); i++) { for (int j = 0; j < getNCubes(); j++) { cubePrefabMatrix[i][j][1].transform.RotateAround(transform.position, transform.forward, angle); } }
+    }
+
+    protected void rotateMidY(float angle)
+    {
+        for (int i = 0; i < getNCubes(); i++) { for (int j = 0; j < getNCubes(); j++) { cubePrefabMatrix[i][1][j].transform.RotateAround(transform.position, transform.up, angle); } }
+    }
+
+    protected void rotateMidX(float angle)
+    {
+        for (int i = 0; i < getNCubes(); i++) { for (int j = 0; j < getNCubes(); j++) { cubePrefabMatrix[1][i][j].transform.RotateAround(transform.position, transform.right, angle); } }
     }
 
     protected void rotateX(float angle)
@@ -305,11 +335,6 @@ public abstract class RubiksCubePrefab : MonoBehaviour
     public bool isSolved()
     {
         return RC.isSolved();
-    }
-
-    public float getScore()
-    {
-        return RC.getScore();
     }
 
     public int turnCount()

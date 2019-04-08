@@ -12,10 +12,13 @@ public class RubiksCubeAgent : Agent
     public int numScramble = 1;
     public int interval = 100;
     public bool animated = false;
-    public bool maskAction = false;
-
     public float minSolveRate = 0.95f;
     public float maxMoveRate = 1.10f;
+
+    [Header("2x2 Cube only")]
+    public bool maskAction = false;
+
+    
     private int solveCount = 0;
     private int resetCount = 0;
     private int totalMoves = 0;
@@ -26,14 +29,15 @@ public class RubiksCubeAgent : Agent
     public override void InitializeAgent()
     {
         rcp = transform.gameObject.GetComponent<RubiksCubePrefab>() as RubiksCubePrefab;
-        if(maskAction)
+
+        if(maskAction && rcp.GetType() == typeof(RubiksCubePrefab2))
         {
             rcp.scramble(numScramble, new int[] { 0, 1, 6, 7, 10, 11 });
         } else
         {
             rcp.scramble(numScramble);
         }
-        
+
         if (animated)
         {
             agentParameters.onDemandDecision = true;
@@ -86,7 +90,7 @@ public class RubiksCubeAgent : Agent
         totalMoves += rcp.turnCount();
 
         rcp.resetCube();
-        if (maskAction)
+        if (maskAction && rcp.GetType() == typeof(RubiksCubePrefab2))
         {
             rcp.scramble(numScramble, new int[] { 0, 1, 6, 7, 10, 11 });
         }

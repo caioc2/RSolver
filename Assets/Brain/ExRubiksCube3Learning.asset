@@ -9,15 +9,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b23992c8eb17439887f5e944bf04a40, type: 3}
-  m_Name: RubiksCube2Learning
+  m_Name: ExRubiksCube3Learning
   m_EditorClassIdentifier: 
   brainParameters:
-    vectorObservationSize: 144
+    vectorObservationSize: 324
     numStackedVectorObservations: 1
-    vectorActionSize: 0c000000
+    vectorActionSize: 12000000
     cameraResolutions: []
     vectorActionDescriptions:
-    - 
+    - Extended move set with middle move
     vectorActionSpaceType: 0
   model: {fileID: 0}
   inferenceDevice: 0

@@ -198,12 +198,12 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: interval
-      value: 50
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: numScramble
-      value: 1
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
@@ -218,357 +218,12 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maxMoveRate
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maskAction
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &233666746
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalPosition.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1893924364514246, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_Name
-      value: RubiksCube2 (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1893924364514246, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: rotationTime
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: rate
-      value: 0.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: agentParameters.maxStep
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: agentParameters.resetOnDone
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: animated
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: startScramble
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: maxScramble
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: interval
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: numScramble
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: DrawCubes
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: minSolveRate
-      value: 0.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: maxMoveRate
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: maskAction
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &275767347
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1893924364514246, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_Name
-      value: RubiksCube2 (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1893924364514246, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: rotationTime
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: rate
-      value: 0.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: agentParameters.maxStep
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: agentParameters.resetOnDone
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: animated
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: startScramble
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: maxScramble
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: interval
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: numScramble
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: DrawCubes
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: minSolveRate
-      value: 0.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: maxMoveRate
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: maskAction
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &441106868
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1893924364514246, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_Name
-      value: RubiksCube2 (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1893924364514246, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: rotationTime
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: rate
-      value: 0.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: agentParameters.maxStep
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: agentParameters.resetOnDone
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: animated
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: startScramble
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: maxScramble
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: interval
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: numScramble
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: DrawCubes
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: minSolveRate
-      value: 0.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: maxMoveRate
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: maskAction
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -658,12 +313,12 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: interval
-      value: 50
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: numScramble
-      value: 1
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
@@ -678,127 +333,12 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maxMoveRate
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maskAction
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &838009950
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalPosition.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071640500091576, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1893924364514246, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_Name
-      value: RubiksCube2 (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1893924364514246, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: rotationTime
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: rate
-      value: 0.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: agentParameters.maxStep
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: agentParameters.resetOnDone
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: animated
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: startScramble
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: maxScramble
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: interval
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: numScramble
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: DrawCubes
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: minSolveRate
-      value: 0.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: maxMoveRate
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
-        type: 2}
-      propertyPath: maskAction
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -861,7 +401,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1162194655
 GameObject:
@@ -1094,12 +634,12 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: interval
-      value: 50
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: numScramble
-      value: 1
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
@@ -1114,12 +654,12 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maxMoveRate
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maskAction
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -1210,12 +750,12 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: interval
-      value: 50
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: numScramble
-      value: 1
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
@@ -1230,12 +770,12 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maxMoveRate
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maskAction
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -1325,12 +865,12 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: interval
-      value: 50
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: numScramble
-      value: 1
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
@@ -1345,12 +885,12 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maxMoveRate
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maskAction
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -1440,12 +980,12 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: interval
-      value: 50
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: numScramble
-      value: 1
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
@@ -1460,12 +1000,12 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maxMoveRate
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maskAction
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -1555,12 +1095,12 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: interval
-      value: 50
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: numScramble
-      value: 1
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
@@ -1575,12 +1115,12 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maxMoveRate
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maskAction
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}
@@ -1670,12 +1210,12 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: interval
-      value: 50
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: numScramble
-      value: 1
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 114539201155453958, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
@@ -1690,12 +1230,12 @@ Prefab:
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maxMoveRate
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114088686890933658, guid: b823a9765b9f14546ac8338678c013ab,
         type: 2}
       propertyPath: maskAction
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b823a9765b9f14546ac8338678c013ab, type: 2}

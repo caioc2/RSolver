@@ -9,10 +9,12 @@ public abstract class RubiksCube
     public enum move
     {
         RIGHT = 0, RIGHTCC = 1, LEFT = 2, LEFTCC = 3, TOP = 4, TOPCC = 5, BOTTOM = 6, BOTTOMCC = 7, FRONT = 8, FRONTCC = 9, BACK = 10, BACKCC = 11,
-        X = 12, XCC = 13, Y = 14, YCC = 15, Z = 16, ZCC = 17, NOTHING = 18
+        MIDX = 12, MIDXCC = 13, MIDY = 14, MIDYCC = 15, MIDZ = 16, MIDZCC = 17,
+        X = 18, XCC = 19, Y = 20, YCC = 21, Z = 22, ZCC = 23, NOTHING = 24
     };
-    public  const int moveCount = 19; //total move count
+    public  const int moveCount = 25; //total move count
     public  const int changeMoveCount = 12; //total moves which change cube configuration
+    public const int extChangeMoveCount = 18;
     public List<List<List<Cube>>> cubeMatrix;
     public List<move> turnRecord;
 
@@ -34,17 +36,17 @@ public abstract class RubiksCube
 
     public abstract int getNCubes();
 
-    protected abstract void rotateRightFace(bool record = true);
+    protected abstract void rotateRightFace(bool record = true, int times = 1);
 
-    protected abstract void rotateLeftFace(bool record = true);
+    protected abstract void rotateLeftFace(bool record = true, int times = 1);
 
-    protected abstract void rotateTopFace(bool record = true);
+    protected abstract void rotateTopFace(bool record = true, int times = 1);
 
-    protected abstract void rotateBottomFace(bool record = true);
+    protected abstract void rotateBottomFace(bool record = true, int times = 1);
 
-    protected abstract void rotateFrontFace(bool record = true);
+    protected abstract void rotateFrontFace(bool record = true, int times = 1);
 
-    protected abstract void rotateBackFace(bool record = true);
+    protected abstract void rotateBackFace(bool record = true, int times = 1);
 
     protected abstract void turnCubeX();
 
@@ -52,25 +54,23 @@ public abstract class RubiksCube
 
     protected abstract void turnCubeZ();
 
-    protected abstract void rotateRightFaceCC(bool record = true);
+    protected abstract void rotateRightFaceCC(bool record = true, int times = 1);
 
-    protected abstract void rotateLeftFaceCC(bool record = true);
+    protected abstract void rotateLeftFaceCC(bool record = true, int times = 1);
 
-    protected abstract void rotateTopFaceCC(bool record = true);
+    protected abstract void rotateTopFaceCC(bool record = true, int times = 1);
 
-    protected abstract void rotateBottomFaceCC(bool record = true);
+    protected abstract void rotateBottomFaceCC(bool record = true, int times = 1);
 
-    protected abstract void rotateFrontFaceCC(bool record = true);
+    protected abstract void rotateFrontFaceCC(bool record = true, int times = 1);
 
-    protected abstract void rotateBackFaceCC(bool record = true);
+    protected abstract void rotateBackFaceCC(bool record = true, int times = 1);
 
     protected abstract void turnCubeXCC();
 
     protected abstract void turnCubeYCC();
 
     protected abstract void turnCubeZCC();
-
-    public abstract float getScore();
 
     public void setDefaultCubeColor()
     {
@@ -153,7 +153,7 @@ public abstract class RubiksCube
         // 6 faces, with n*n cubes faces, with possible 6 colors per cube
         float[] state = new float[6 * n * n * 6];
 
-        //pre-process, first map current sides to colors
+        /*//pre-process, first map current sides to colors
 
         int[] c2s = new int[6];//Not safe if change color/side enum values
         //int[] s2c = new int[6];
@@ -163,21 +163,21 @@ public abstract class RubiksCube
             Cube.colorEnum c = getFaceColors(s)[1, 1];
             c2s[(int)c] = (int)s;
             //s2c[(int)s] = (int)c;
-        }
+        }*/
 
         int i = 0;
         foreach (Cube.sides s in System.Enum.GetValues(typeof(Cube.sides)))
         {
             foreach (Cube.colorEnum c in getFaceColors(s))
             {
-                state[i + c2s[(int)c]] = 1.0f;
+                state[i + /*c2s[*/(int)c/*]*/] = 1.0f;
                 i += 6;
             }
         }
         return state;
     }
     
-    public void RunCustomSequence(move m)
+    public virtual void RunCustomSequence(move m)
     {
         switch (m)
         {
@@ -438,79 +438,85 @@ public class RubiksCube3 : RubiksCube
     }
 
 
-    void rotateMiddleXYFace()//clockwise is relative to front face in this case
+    void rotateMiddleXYFace(bool record = true, int times = 1)//clockwise is relative to front face in this case
     {
         List<Cube> oldFrontOutline = getOutline(getCubeXYFace(1, false));
         List<Cube> currentFrontOutline = getOutline(getCubeXYFace(1, true));
 
         for (int i = 0; i < 8; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 6) % 8].getColors());
-            currentFrontOutline[i].rotateZ();
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 6*times) % 8].getColors());
+            for (int j = 0; j < times; ++j) currentFrontOutline[i].rotateZ();
         }
+        if (record) for(int i = 0; i < times;++i) turnRecord.Add(move.MIDZ);
     }
 
-    void rotateMiddleXYFaceCC()//clockwise is relative to front face in this case
+    void rotateMiddleXYFaceCC(bool record = true, int times = 1)//clockwise is relative to front face in this case
     {
         List<Cube> oldFrontOutline = getOutline(getCubeXYFace(1, false));
         List<Cube> currentFrontOutline = getOutline(getCubeXYFace(1, true));
 
         for (int i = 0; i < 8; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 2) % 8].getColors());
-            currentFrontOutline[i].rotateZCC();
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 2 * times) % 8].getColors());
+            for (int j = 0; j < times; ++j) currentFrontOutline[i].rotateZCC();
         }
+        if (record) turnRecord.Add(move.MIDZCC);
     }
 
-    void rotateMiddleYZFace()//clockwise is relative to left face
+    void rotateMiddleYZFace(bool record = true, int times = 1)//clockwise is relative to left face
     {
         List<Cube> oldFrontOutline = getOutline(getCubeYZFace(1, false));
         List<Cube> currentFrontOutline = getOutline(getCubeYZFace(1, true));
 
         for (int i = 0; i < 8; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 6) % 8].getColors());
-            currentFrontOutline[i].rotateXCC();
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 6 * times) % 8].getColors());
+            for (int j = 0; j < times; ++j) currentFrontOutline[i].rotateXCC();
         }
+        if (record) turnRecord.Add(move.MIDX);
     }
 
-    void rotateMiddleYZFaceCC()//clockwise is relative to left face
+    void rotateMiddleYZFaceCC(bool record = true, int times = 1)//clockwise is relative to left face
     {
         List<Cube> oldFrontOutline = getOutline(getCubeYZFace(1, false));
         List<Cube> currentFrontOutline = getOutline(getCubeYZFace(1, true));
 
         for (int i = 0; i < 8; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 2) % 8].getColors());
-            currentFrontOutline[i].rotateX();
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 2 * times) % 8].getColors());
+            for (int j = 0; j < times; ++j) currentFrontOutline[i].rotateX();
         }
+        if (record) turnRecord.Add(move.MIDXCC);
     }
 
-    void rotateMiddleXZFace()//clockwise is relative to bottom face
+    void rotateMiddleXZFace(bool record = true, int times = 1)//clockwise is relative to bottom face
     {
         List<Cube> oldFrontOutline = getOutline(getCubeXZFace(1, false));
         List<Cube> currentFrontOutline = getOutline(getCubeXZFace(1, true));
 
         for (int i = 0; i < 8; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 2) % 8].getColors());
-            currentFrontOutline[i].rotateY();
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 2 * times) % 8].getColors());
+            for (int j = 0; j < times; ++j) currentFrontOutline[i].rotateY();
         }
+        if (record) turnRecord.Add(move.MIDY);
     }
 
-    void rotateMiddleXZFaceCC()//clockwise is relative to bottom face
+    void rotateMiddleXZFaceCC(bool record = true, int times = 1)//clockwise is relative to bottom face
     {
         List<Cube> oldFrontOutline = getOutline(getCubeXZFace(1, false));
         List<Cube> currentFrontOutline = getOutline(getCubeXZFace(1, true));
 
         for (int i = 0; i < 8; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 6) % 8].getColors());
-            currentFrontOutline[i].rotateYCC();
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 6 * times) % 8].getColors());
+            for (int j = 0; j < times; ++j) currentFrontOutline[i].rotateYCC();
         }
+        if (record) turnRecord.Add(move.MIDYCC);
     }
 
-    protected override void rotateFrontFace(bool record = true)
+    protected override void rotateFrontFace(bool record = true, int times = 1)
     {
 
         List<Cube> oldFrontOutline = getOutline(getCubeXYFace(0, false));
@@ -518,13 +524,13 @@ public class RubiksCube3 : RubiksCube
 
         for (int i = 0; i < 8; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 6) % 8].getColors());
-            currentFrontOutline[i].rotateZ();
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 6 * times) % 8].getColors());
+            for (int j = 0; j < times; ++j) currentFrontOutline[i].rotateZ();
         }
         if (record) turnRecord.Add(move.FRONT);
     }
 
-    protected override void rotateFrontFaceCC(bool record = true)
+    protected override void rotateFrontFaceCC(bool record = true, int times = 1)
     {
 
         List<Cube> oldFrontOutline = getOutline(getCubeXYFace(0, false));
@@ -532,13 +538,13 @@ public class RubiksCube3 : RubiksCube
 
         for (int i = 0; i < 8; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 2) % 8].getColors());
-            currentFrontOutline[i].rotateZCC();
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 2 * times) % 8].getColors());
+            for (int j = 0; j < times; ++j) currentFrontOutline[i].rotateZCC();
         }
         if (record) turnRecord.Add(move.FRONTCC);
     }
 
-    protected override void rotateBackFace(bool record = true)
+    protected override void rotateBackFace(bool record = true, int times = 1)
     {
 
         List<Cube> oldFrontOutline = getOutline(getCubeXYFace(2, false));
@@ -546,13 +552,13 @@ public class RubiksCube3 : RubiksCube
 
         for (int i = 0; i < 8; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 2) % 8].getColors());
-            currentFrontOutline[i].rotateZCC();
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 2 * times) % 8].getColors());
+            for (int j = 0; j < times; ++j) currentFrontOutline[i].rotateZCC();
         }
         if (record) turnRecord.Add(move.BACK);
     }
 
-    protected override void rotateBackFaceCC(bool record = true)
+    protected override void rotateBackFaceCC(bool record = true, int times = 1)
     {
 
         List<Cube> oldFrontOutline = getOutline(getCubeXYFace(2, false));
@@ -560,13 +566,13 @@ public class RubiksCube3 : RubiksCube
 
         for (int i = 0; i < 8; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 6) % 8].getColors());
-            currentFrontOutline[i].rotateZ();
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 6 * times) % 8].getColors());
+            for (int j = 0; j < times; ++j) currentFrontOutline[i].rotateZ();
         }
         if (record) turnRecord.Add(move.BACKCC);
     }
 
-    protected override void rotateRightFace(bool record = true)
+    protected override void rotateRightFace(bool record = true, int times = 1)
     {
 
         List<Cube> oldFrontOutline = getOutline(getCubeYZFace(2, false));
@@ -574,13 +580,13 @@ public class RubiksCube3 : RubiksCube
 
         for (int i = 0; i < 8; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 2) % 8].getColors());
-            currentFrontOutline[i].rotateX();
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 2 * times) % 8].getColors());
+            for (int j = 0; j < times; ++j) currentFrontOutline[i].rotateX();
         }
         if (record) turnRecord.Add(move.RIGHT);
     }
 
-    protected override void rotateRightFaceCC(bool record = true)
+    protected override void rotateRightFaceCC(bool record = true, int times = 1)
     {
 
         List<Cube> oldFrontOutline = getOutline(getCubeYZFace(2, false));
@@ -588,13 +594,13 @@ public class RubiksCube3 : RubiksCube
 
         for (int i = 0; i < 8; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 6) % 8].getColors());
-            currentFrontOutline[i].rotateXCC();
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 6 * times) % 8].getColors());
+            for (int j = 0; j < times; ++j) currentFrontOutline[i].rotateXCC();
         }
         if (record) turnRecord.Add(move.RIGHTCC);
     }
 
-    protected override void rotateLeftFace(bool record = true)
+    protected override void rotateLeftFace(bool record = true, int times = 1)
     {
 
         List<Cube> oldFrontOutline = getOutline(getCubeYZFace(0, false));
@@ -602,14 +608,14 @@ public class RubiksCube3 : RubiksCube
 
         for (int i = 0; i < 8; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 6) % 8].getColors());
-            currentFrontOutline[i].rotateXCC();
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 6 * times) % 8].getColors());
+            for (int j = 0; j < times; ++j) currentFrontOutline[i].rotateXCC();
 
         }
         if (record) turnRecord.Add(move.LEFT);
     }
 
-    protected override void rotateLeftFaceCC(bool record = true)
+    protected override void rotateLeftFaceCC(bool record = true, int times = 1)
     {
 
         List<Cube> oldFrontOutline = getOutline(getCubeYZFace(0, false));
@@ -617,61 +623,61 @@ public class RubiksCube3 : RubiksCube
 
         for (int i = 0; i < 8; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 2) % 8].getColors());
-            currentFrontOutline[i].rotateX();
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 2 * times) % 8].getColors());
+            for (int j = 0; j < times; ++j) currentFrontOutline[i].rotateX();
 
         }
         if (record) turnRecord.Add(move.LEFT);
     }
 
-    protected override void rotateTopFace(bool record = true)
+    protected override void rotateTopFace(bool record = true, int times = 1)
     {
         List<Cube> oldFrontOutline = getOutline(getCubeXZFace(2, false));
         List<Cube> currentFrontOutline = getOutline(getCubeXZFace(2, true));
 
         for (int i = 0; i < 8; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 6) % 8].getColors());
-            currentFrontOutline[i].rotateYCC();
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 6 * times) % 8].getColors());
+            for (int j = 0; j < times; ++j) currentFrontOutline[i].rotateYCC();
         }
         if (record) turnRecord.Add(move.TOP);
     }
 
-    protected override void rotateTopFaceCC(bool record = true)
+    protected override void rotateTopFaceCC(bool record = true, int times = 1)
     {
         List<Cube> oldFrontOutline = getOutline(getCubeXZFace(2, false));
         List<Cube> currentFrontOutline = getOutline(getCubeXZFace(2, true));
 
         for (int i = 0; i < 8; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 2) % 8].getColors());
-            currentFrontOutline[i].rotateY();
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 2 * times) % 8].getColors());
+            for (int j = 0; j < times; ++j) currentFrontOutline[i].rotateY();
         }
         if (record) turnRecord.Add(move.TOPCC);
     }
 
-    protected override void rotateBottomFace(bool record = true)
+    protected override void rotateBottomFace(bool record = true, int times = 1)
     {
         List<Cube> oldFrontOutline = getOutline(getCubeXZFace(0, false));
         List<Cube> currentFrontOutline = getOutline(getCubeXZFace(0, true));
 
         for (int i = 0; i < 8; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 2) % 8].getColors());
-            currentFrontOutline[i].rotateY();
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 2 * times) % 8].getColors());
+            for (int j = 0; j < times; ++j) currentFrontOutline[i].rotateY();
         }
         if (record) turnRecord.Add(move.BOTTOM);
     }
 
-    protected override void rotateBottomFaceCC(bool record = true)
+    protected override void rotateBottomFaceCC(bool record = true, int times = 1)
     {
         List<Cube> oldFrontOutline = getOutline(getCubeXZFace(0, false));
         List<Cube> currentFrontOutline = getOutline(getCubeXZFace(0, true));
 
         for (int i = 0; i < 8; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 6) % 8].getColors());
-            currentFrontOutline[i].rotateYCC();
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 6 * times) % 8].getColors());
+            for (int j = 0; j < times; ++j) currentFrontOutline[i].rotateYCC();
         }
         if (record) turnRecord.Add(move.BOTTOMCC);
     }
@@ -679,7 +685,7 @@ public class RubiksCube3 : RubiksCube
     protected override void turnCubeZ()
     {
         rotateFrontFace(false);
-        rotateMiddleXYFace();
+        rotateMiddleXYFace(false);
         rotateBackFaceCC(false);
         turnRecord.Add(move.Z);
     }
@@ -687,7 +693,7 @@ public class RubiksCube3 : RubiksCube
     protected override void turnCubeZCC()
     {
         rotateFrontFaceCC(false);
-        rotateMiddleXYFaceCC();
+        rotateMiddleXYFaceCC(false);
         rotateBackFace(false);
         turnRecord.Add(move.ZCC);
     }
@@ -695,7 +701,7 @@ public class RubiksCube3 : RubiksCube
     protected override void turnCubeX()
     {
         rotateLeftFace(false);
-        rotateMiddleYZFace();
+        rotateMiddleYZFace(false);
         rotateRightFaceCC(false);
         turnRecord.Add(move.X);
     }
@@ -703,7 +709,7 @@ public class RubiksCube3 : RubiksCube
     protected override void turnCubeXCC()
     {
         rotateLeftFaceCC(false);
-        rotateMiddleYZFaceCC();
+        rotateMiddleYZFaceCC(false);
         rotateRightFace(false);
         turnRecord.Add(move.XCC);
     }
@@ -711,7 +717,7 @@ public class RubiksCube3 : RubiksCube
     protected override void turnCubeY()
     {
         rotateBottomFace(false);
-        rotateMiddleXZFace();
+        rotateMiddleXZFace(false);
         rotateTopFaceCC(false);
         turnRecord.Add(move.Y);
     }
@@ -719,27 +725,9 @@ public class RubiksCube3 : RubiksCube
     protected override void turnCubeYCC()
     {
         rotateBottomFaceCC(false);
-        rotateMiddleXZFaceCC();
+        rotateMiddleXZFaceCC(false);
         rotateTopFace(false);
         turnRecord.Add(move.YCC);
-    }
-
-    public override float getScore()
-    {
-        float sc = 0.0f;
-        foreach (Cube.sides s in System.Enum.GetValues(typeof(Cube.sides)))
-        {
-            Cube.colorEnum[,] c = getFaceColors(s);
-            for (int k = 0; k < 3; ++k)
-            {
-                for (int l = 0; l < 3; ++l)
-                {
-                    if (c[l, k] != c[1, 1])
-                        sc -= 1.0f;
-                }
-            }
-        }
-        return sc;
     }
 
     public RubiksCube3 cloneCube()
@@ -764,6 +752,88 @@ public class RubiksCube3 : RubiksCube
         }
 
         return RC;
+    }
+
+    public override void RunCustomSequence(move m)
+    {
+        switch (m)
+        {
+            case move.RIGHT:
+                rotateRightFace();
+                break;
+            case move.RIGHTCC:
+                rotateRightFaceCC();
+                break;
+            case move.LEFT:
+                rotateLeftFace();
+                break;
+            case move.LEFTCC:
+                rotateLeftFaceCC();
+                break;
+            case move.TOP:
+                rotateTopFace();
+                break;
+            case move.TOPCC:
+                rotateTopFaceCC();
+                break;
+            case move.BOTTOM:
+                rotateBottomFace();
+                break;
+            case move.BOTTOMCC:
+                rotateBottomFaceCC();
+                break;
+            case move.FRONT:
+                rotateFrontFace();
+                break;
+            case move.FRONTCC:
+                rotateFrontFaceCC();
+                break;
+            case move.BACK:
+                rotateBackFace();
+                break;
+            case move.BACKCC:
+                rotateBackFaceCC();
+                break;
+            case move.MIDX:
+                rotateMiddleYZFace();
+                break;
+            case move.MIDXCC:
+                rotateMiddleYZFaceCC();
+                break;
+            case move.MIDY:
+                rotateMiddleXZFace();
+                break;
+            case move.MIDYCC:
+                rotateMiddleXZFaceCC();
+                break;
+            case move.MIDZ:
+                rotateMiddleXYFace();
+                break;
+            case move.MIDZCC:
+                rotateMiddleXYFaceCC();
+                break;
+            case move.X:
+                turnCubeX();
+                break;
+            case move.XCC:
+                turnCubeXCC();
+                break;
+            case move.Y:
+                turnCubeY();
+                break;
+            case move.YCC:
+                turnCubeYCC();
+                break;
+            case move.Z:
+                turnCubeZ();
+                break;
+            case move.ZCC:
+                turnCubeZCC();
+                break;
+            case move.NOTHING:
+            default:
+                break;
+        }
     }
 }
 
@@ -816,159 +886,159 @@ public class RubiksCube2 : RubiksCube
         return outline;
     }
 
-    protected override void rotateFrontFace(bool record = true)
+    protected override void rotateFrontFace(bool record = true, int times = 1)
     {
         List<Cube> oldFrontOutline = getOutline(getCubeXYFace(0, false));
         List<Cube> currentFrontOutline = getOutline(getCubeXYFace(0, true));
 
         for (int i = 0; i < 4; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 3) % 4].getColors());
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 3*times) % 4].getColors());
             currentFrontOutline[i].rotateZ();
         }
         if (record) turnRecord.Add(move.FRONT);
     }
 
-    protected override void rotateFrontFaceCC(bool record = true)
+    protected override void rotateFrontFaceCC(bool record = true, int times = 1)
     {
         List<Cube> oldFrontOutline = getOutline(getCubeXYFace(0, false));
         List<Cube> currentFrontOutline = getOutline(getCubeXYFace(0, true));
 
         for (int i = 0; i < 4; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 1) % 4].getColors());
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 1 * times) % 4].getColors());
             currentFrontOutline[i].rotateZCC();
         }
         if (record) turnRecord.Add(move.FRONTCC);
     }
 
-    protected override void rotateBackFace(bool record = true)
+    protected override void rotateBackFace(bool record = true, int times = 1)
     {
         List<Cube> oldFrontOutline = getOutline(getCubeXYFace(1, false));
         List<Cube> currentFrontOutline = getOutline(getCubeXYFace(1, true));
 
         for (int i = 0; i < 4; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 1) % 4].getColors());
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 1 * times) % 4].getColors());
             currentFrontOutline[i].rotateZCC();
         }
         if (record) turnRecord.Add(move.BACK);
     }
 
-    protected override void rotateBackFaceCC(bool record = true)
+    protected override void rotateBackFaceCC(bool record = true, int times = 1)
     {
         List<Cube> oldFrontOutline = getOutline(getCubeXYFace(1, false));
         List<Cube> currentFrontOutline = getOutline(getCubeXYFace(1, true));
 
         for (int i = 0; i < 4; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 3) % 4].getColors());
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 3 * times) % 4].getColors());
             currentFrontOutline[i].rotateZ();
         }
         if (record) turnRecord.Add(move.BACKCC);
     }
 
-    protected override void rotateRightFace(bool record = true)
+    protected override void rotateRightFace(bool record = true, int times = 1)
     {
         List<Cube> oldFrontOutline = getOutline(getCubeYZFace(1, false));
         List<Cube> currentFrontOutline = getOutline(getCubeYZFace(1, true));
 
         for (int i = 0; i < 4; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 1) % 4].getColors());
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 1 * times) % 4].getColors());
             currentFrontOutline[i].rotateX();
         }
         if (record) turnRecord.Add(move.RIGHT);
     }
 
-    protected override void rotateRightFaceCC(bool record = true)
+    protected override void rotateRightFaceCC(bool record = true, int times = 1)
     {
         List<Cube> oldFrontOutline = getOutline(getCubeYZFace(1, false));
         List<Cube> currentFrontOutline = getOutline(getCubeYZFace(1, true));
 
         for (int i = 0; i < 4; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 3) % 4].getColors());
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 3 * times) % 4].getColors());
             currentFrontOutline[i].rotateXCC();
         }
         if (record) turnRecord.Add(move.RIGHTCC);
     }
 
-    protected override void rotateLeftFace(bool record = true)
+    protected override void rotateLeftFace(bool record = true, int times = 1)
     {
         List<Cube> oldFrontOutline = getOutline(getCubeYZFace(0, false));
         List<Cube> currentFrontOutline = getOutline(getCubeYZFace(0, true));
 
         for (int i = 0; i < 4; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 3) % 4].getColors());
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 3 * times) % 4].getColors());
             currentFrontOutline[i].rotateXCC();
 
         }
         if (record) turnRecord.Add(move.LEFT);
     }
 
-    protected override void rotateLeftFaceCC(bool record = true)
+    protected override void rotateLeftFaceCC(bool record = true, int times = 1)
     {
         List<Cube> oldFrontOutline = getOutline(getCubeYZFace(0, false));
         List<Cube> currentFrontOutline = getOutline(getCubeYZFace(0, true));
 
         for (int i = 0; i < 4; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 1) % 4].getColors());
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 1 * times) % 4].getColors());
             currentFrontOutline[i].rotateX();
 
         }
         if (record) turnRecord.Add(move.LEFT);
     }
 
-    protected override void rotateTopFace(bool record = true)
+    protected override void rotateTopFace(bool record = true, int times = 1)
     {
         List<Cube> oldFrontOutline = getOutline(getCubeXZFace(1, false));
         List<Cube> currentFrontOutline = getOutline(getCubeXZFace(1, true));
 
         for (int i = 0; i < 4; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 3) % 4].getColors());
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 3 * times) % 4].getColors());
             currentFrontOutline[i].rotateYCC();
         }
         if (record) turnRecord.Add(move.TOP);
     }
 
-    protected override void rotateTopFaceCC(bool record = true)
+    protected override void rotateTopFaceCC(bool record = true, int times = 1)
     {
         List<Cube> oldFrontOutline = getOutline(getCubeXZFace(1, false));
         List<Cube> currentFrontOutline = getOutline(getCubeXZFace(1, true));
 
         for (int i = 0; i < 4; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 1) % 4].getColors());
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 1 * times) % 4].getColors());
             currentFrontOutline[i].rotateY();
         }
         if (record) turnRecord.Add(move.TOPCC);
     }
 
-    protected override void rotateBottomFace(bool record = true)
+    protected override void rotateBottomFace(bool record = true, int times = 1)
     {
         List<Cube> oldFrontOutline = getOutline(getCubeXZFace(0, false));
         List<Cube> currentFrontOutline = getOutline(getCubeXZFace(0, true));
 
         for (int i = 0; i < 4; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 1) % 4].getColors());
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 1 * times) % 4].getColors());
             currentFrontOutline[i].rotateY();
         }
         if (record) turnRecord.Add(move.BOTTOM);
     }
 
-    protected override void rotateBottomFaceCC(bool record = true)
+    protected override void rotateBottomFaceCC(bool record = true, int times = 1)
     {
         List<Cube> oldFrontOutline = getOutline(getCubeXZFace(0, false));
         List<Cube> currentFrontOutline = getOutline(getCubeXZFace(0, true));
 
         for (int i = 0; i < 4; i++)
         {
-            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 3) % 4].getColors());
+            currentFrontOutline[i].setSideColors(oldFrontOutline[(i + 3 * times) % 4].getColors());
             currentFrontOutline[i].rotateYCC();
         }
         if (record) turnRecord.Add(move.BOTTOMCC);
@@ -1014,24 +1084,6 @@ public class RubiksCube2 : RubiksCube
         rotateBottomFaceCC(false);
         rotateTopFace(false);
         turnRecord.Add(move.YCC);
-    }
-
-    public override float getScore()
-    {
-        float sc = 0.0f;
-        foreach (Cube.sides s in System.Enum.GetValues(typeof(Cube.sides)))
-        {
-            Cube.colorEnum[,] c = getFaceColors(s);
-            for (int k = 0; k < 2; ++k)
-            {
-                for (int l = 0; l < 2; ++l)
-                {
-                    if (c[l, k] != c[1, 1])
-                        sc -= 1.0f;
-                }
-            }
-        }
-        return sc;
     }
 
     public RubiksCube2 cloneCube()

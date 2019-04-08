@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e8223863c9d6e4cac3a23ed2d2e056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
+  brain: {fileID: 11400000, guid: f9d61911ef6813d48b5e587227b61e93, type: 2}
   agentParameters:
     agentCameras: []
     maxStep: 100
@@ -150,16 +150,15 @@ MonoBehaviour:
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
   numScramble: 1
-  interval: 500
+  interval: 50
   animated: 0
-  maskAction: 0
   minSolveRate: 0.97
   maxMoveRate: 100
+  maskAction: 0
 --- !u!114 &358468097
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 358468095}
   m_Enabled: 1
@@ -169,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CubePrefab: {fileID: 192468, guid: 9724fe1fcf8e8e24fbeefc4bcd944be4, type: 2}
   spacing: 1.05
-  rotationTime: 0.05
+  rotationTime: 0.1
   DrawCubes: 0
 --- !u!4 &358468098
 Transform:
@@ -336,7 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e8223863c9d6e4cac3a23ed2d2e056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
+  brain: {fileID: 11400000, guid: f9d61911ef6813d48b5e587227b61e93, type: 2}
   agentParameters:
     agentCameras: []
     maxStep: 100
@@ -344,16 +343,15 @@ MonoBehaviour:
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
   numScramble: 1
-  interval: 500
+  interval: 50
   animated: 0
-  maskAction: 0
   minSolveRate: 0.97
   maxMoveRate: 100
+  maskAction: 0
 --- !u!114 &811062382
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 811062380}
   m_Enabled: 1
@@ -363,7 +361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CubePrefab: {fileID: 192468, guid: 9724fe1fcf8e8e24fbeefc4bcd944be4, type: 2}
   spacing: 1.05
-  rotationTime: 0.05
+  rotationTime: 0.1
   DrawCubes: 0
 --- !u!4 &811062383
 Transform:
@@ -407,7 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e8223863c9d6e4cac3a23ed2d2e056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
+  brain: {fileID: 11400000, guid: f9d61911ef6813d48b5e587227b61e93, type: 2}
   agentParameters:
     agentCameras: []
     maxStep: 100
@@ -415,16 +413,15 @@ MonoBehaviour:
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
   numScramble: 1
-  interval: 500
+  interval: 50
   animated: 0
-  maskAction: 0
   minSolveRate: 0.97
   maxMoveRate: 100
+  maskAction: 0
 --- !u!114 &891747060
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 891747058}
   m_Enabled: 1
@@ -434,7 +431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CubePrefab: {fileID: 192468, guid: 9724fe1fcf8e8e24fbeefc4bcd944be4, type: 2}
   spacing: 1.05
-  rotationTime: 0.05
+  rotationTime: 0.1
   DrawCubes: 0
 --- !u!4 &891747061
 Transform:
@@ -478,7 +475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e8223863c9d6e4cac3a23ed2d2e056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
+  brain: {fileID: 11400000, guid: f9d61911ef6813d48b5e587227b61e93, type: 2}
   agentParameters:
     agentCameras: []
     maxStep: 100
@@ -486,16 +483,15 @@ MonoBehaviour:
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
   numScramble: 1
-  interval: 500
+  interval: 50
   animated: 0
-  maskAction: 0
   minSolveRate: 0.97
   maxMoveRate: 100
+  maskAction: 0
 --- !u!114 &973590882
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 973590880}
   m_Enabled: 1
@@ -505,7 +501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CubePrefab: {fileID: 192468, guid: 9724fe1fcf8e8e24fbeefc4bcd944be4, type: 2}
   spacing: 1.05
-  rotationTime: 0.05
+  rotationTime: 0.1
   DrawCubes: 0
 --- !u!4 &973590883
 Transform:
@@ -549,7 +545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e8223863c9d6e4cac3a23ed2d2e056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
+  brain: {fileID: 11400000, guid: f9d61911ef6813d48b5e587227b61e93, type: 2}
   agentParameters:
     agentCameras: []
     maxStep: 100
@@ -557,16 +553,15 @@ MonoBehaviour:
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
   numScramble: 1
-  interval: 500
+  interval: 50
   animated: 0
-  maskAction: 0
   minSolveRate: 0.97
   maxMoveRate: 100
+  maskAction: 0
 --- !u!114 &1004321936
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1004321934}
   m_Enabled: 1
@@ -576,7 +571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CubePrefab: {fileID: 192468, guid: 9724fe1fcf8e8e24fbeefc4bcd944be4, type: 2}
   spacing: 1.05
-  rotationTime: 0.05
+  rotationTime: 0.1
   DrawCubes: 0
 --- !u!4 &1004321937
 Transform:
@@ -685,7 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e8223863c9d6e4cac3a23ed2d2e056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
+  brain: {fileID: 11400000, guid: f9d61911ef6813d48b5e587227b61e93, type: 2}
   agentParameters:
     agentCameras: []
     maxStep: 100
@@ -693,16 +688,15 @@ MonoBehaviour:
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
   numScramble: 1
-  interval: 500
+  interval: 50
   animated: 0
-  maskAction: 0
   minSolveRate: 0.97
   maxMoveRate: 100
+  maskAction: 0
 --- !u!114 &1077254205
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1077254203}
   m_Enabled: 1
@@ -712,7 +706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CubePrefab: {fileID: 192468, guid: 9724fe1fcf8e8e24fbeefc4bcd944be4, type: 2}
   spacing: 1.05
-  rotationTime: 0.05
+  rotationTime: 0.1
   DrawCubes: 0
 --- !u!4 &1077254206
 Transform:
@@ -756,7 +750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e8223863c9d6e4cac3a23ed2d2e056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
+  brain: {fileID: 11400000, guid: f9d61911ef6813d48b5e587227b61e93, type: 2}
   agentParameters:
     agentCameras: []
     maxStep: 100
@@ -764,16 +758,15 @@ MonoBehaviour:
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
   numScramble: 1
-  interval: 500
+  interval: 50
   animated: 0
-  maskAction: 0
   minSolveRate: 0.97
   maxMoveRate: 100
+  maskAction: 0
 --- !u!114 &1144905102
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1144905100}
   m_Enabled: 1
@@ -783,7 +776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CubePrefab: {fileID: 192468, guid: 9724fe1fcf8e8e24fbeefc4bcd944be4, type: 2}
   spacing: 1.05
-  rotationTime: 0.05
+  rotationTime: 0.1
   DrawCubes: 0
 --- !u!4 &1144905103
 Transform:
@@ -827,7 +820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e8223863c9d6e4cac3a23ed2d2e056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brain: {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
+  brain: {fileID: 11400000, guid: f9d61911ef6813d48b5e587227b61e93, type: 2}
   agentParameters:
     agentCameras: []
     maxStep: 100
@@ -835,16 +828,15 @@ MonoBehaviour:
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
   numScramble: 1
-  interval: 500
+  interval: 50
   animated: 0
-  maskAction: 0
   minSolveRate: 0.97
   maxMoveRate: 100
+  maskAction: 0
 --- !u!114 &1187925653
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11445522, guid: 2932d75b410c50742b8fc901f71b4898,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1187925651}
   m_Enabled: 1
@@ -854,7 +846,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CubePrefab: {fileID: 192468, guid: 9724fe1fcf8e8e24fbeefc4bcd944be4, type: 2}
   spacing: 1.05
-  rotationTime: 0.05
+  rotationTime: 0.1
   DrawCubes: 0
 --- !u!4 &1187925654
 Transform:
@@ -898,8 +890,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   broadcastHub:
     broadcastingBrains:
-    - {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
+    - {fileID: 11400000, guid: f9d61911ef6813d48b5e587227b61e93, type: 2}
     _brainsToControl:
+    - {fileID: 11400000, guid: f9d61911ef6813d48b5e587227b61e93, type: 2}
     - {fileID: 11400000, guid: 0ffb51bec605e7b4fbf5a884f78842f7, type: 2}
   maxSteps: 0
   trainingConfiguration:
@@ -909,8 +902,8 @@ MonoBehaviour:
     timeScale: 100
     targetFrameRate: -1
   inferenceConfiguration:
-    width: 1280
-    height: 720
+    width: -1
+    height: -1
     qualityLevel: 0
     timeScale: 1
     targetFrameRate: 60
