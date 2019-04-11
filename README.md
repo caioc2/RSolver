@@ -22,7 +22,9 @@ After training for about 3 hours on a notebook CPU we were able to solve the 2x2
 
 The artificial neural network used was pretty simple, 2 hidden layers with 512 units each. More details about training procedures can be found in the following text. You can test the DRL solver online [here](https://caioc2.github.io/RSolver/game/).
 
-[![Video of the game.](http://img.youtube.com/vi/TfZp3LCC-uM/0.jpg)](http://www.youtube.com/watch?v=TfZp3LCC-uM)
+|                                                                                                                |
+|:--------------------------------------------------------------------------------------------------------------:|
+|[![Video of the game.](http://img.youtube.com/vi/TfZp3LCC-uM/0.jpg)](http://www.youtube.com/watch?v=TfZp3LCC-uM)|
 
 ## Usage
 
